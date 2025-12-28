@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="pt-24 pb-12 px-4 max-w-7xl mx-auto">
+    <div class="pt-24 pb-40 px-4 max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         
         <div class="space-y-8">
@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
 
-        <div class="bg-terminal-gray border border-gray-700 rounded-lg overflow-hidden shadow-2xl font-mono text-sm md:text-base">
+        <div class="bg-terminal-gray border border-gray-700 rounded-lg overflow-hidden shadow-2xl font-mono text-sm md:text-base h-auto w-full">
           <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
             <div class="w-3 h-3 rounded-full bg-red-500"></div>
             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -38,7 +38,7 @@ import { CommonModule } from '@angular/common';
             <span class="ml-2 text-xs text-gray-400">Thalisson.java</span>
           </div>
           
-          <div class="p-6 overflow-x-auto">
+          <div class="p-6 pb-12 overflow-x-auto">
             <pre><code><span class="text-code-keyword">public class</span> <span class="text-yellow-400">ThalissonDeveloper</span> <span class="text-code-keyword">extends</span> <span class="text-code-class">BackendDev</span> &#123;
   
   <span class="text-code-keyword">private final</span> String focus = <span class="text-code-string">"Java & Spring"</span>;
