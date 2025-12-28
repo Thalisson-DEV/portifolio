@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect x="2" y="2" width="60" height="60" rx="12" ry="12" fill="#0d1117" stroke="#2ea043" stroke-width="2"/>
+  
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" 
+        fill="#2ea043" 
+        font-family="'Fira Code', monospace, Courier, sans-serif" 
+        font-weight="bold" 
+        font-size="28px" letter-spacing="-1px">
+    &lt;T/&gt;
+  </text>
+</svg>

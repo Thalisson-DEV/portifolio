@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-terminal-black text-gray-300 font-sans;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-terminal-black;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+app-root {
+  display: block;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative; /* O pai precisa ser relativo */
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Evita barra de rolagem durante a animação */
+}
+
+/* O elemento div que envolve o router-outlet no app.component */
+main > div {
+  position: absolute; /* As páginas precisam flutuar uma sobre a outra */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity; /* Otimização de GPU */
+}
