@@ -37,25 +37,39 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'BP-Web (Sesi)',
-      description: 'Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.',
-      tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JavaScript'],
-      github: 'https://github.com/Thalisson-DEV', // Substitua pelos links reais se tiver permissão
-      linkedin: '#'
+      title: 'Portifolio',
+      description: 'Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.',
+      tech: ['Java', 'Spring Boot', 'Typescript', 'Angular', 'Tailwind CSS', 'Docker', 'Github Actions'],
+      github: 'https://github.com/Thalisson-DEV/portifolio',
+      linkedin: ''
     },
     {
-      title: 'GeoRoute API',
-      description: 'API de geolocalização para otimização logística. Integração com Google Maps API para cálculo de rotas e localização de clientes.',
-      tech: ['Java', 'Spring MVC', 'Google Maps API', 'NeonDB'],
-      github: 'https://github.com/Thalisson-DEV',
-      linkedin: '#'
+      title: 'Backpack',
+      description: 'Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.',
+      tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JavaScript', 'Docker', 'Redis'],
+      github: 'https://github.com/Thalisson-DEV/bp-web',
+      linkedin: 'https://www.linkedin.com/posts/thalisson-dami%C3%A3o_desenvolvimentodesoftware-java-springboot-activity-7358647247649001474-a6eW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNEKNgBD06ou2uKKbE4OTAymtbAS9nJfbI'
     },
     {
       title: 'LangChain4j Integration',
       description: 'Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.',
-      tech: ['Java 21', 'LangChain4j', 'Gemini AI'],
-      github: 'https://github.com/Thalisson-DEV',
-      linkedin: '#'
+      tech: ['Java', 'Spring Boot', 'LangChain4j', 'Gemini'],
+      github: 'https://github.com/Thalisson-DEV/langchain4j-api',
+      linkedin: 'https://www.linkedin.com/posts/thalisson-dami%C3%A3o_java-springboot-langchain4j-activity-7409944520081117185-aSv0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNEKNgBD06ou2uKKbE4OTAymtbAS9nJfbI'
+    },
+    {
+      title: 'Desafio Angular API',
+      description: 'Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.',
+      tech: ['Java', 'Spring Boot', 'Cache', 'Redis', 'Docker', 'PostgreSQL'],
+      github: 'https://github.com/Thalisson-DEV/desafio-angular-api',
+      linkedin: 'https://www.linkedin.com/posts/thalisson-dami%C3%A3o_java-springboot-desenvolvedorbackend-activity-7383169955678093312-nyeh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNEKNgBD06ou2uKKbE4OTAymtbAS9nJfbI'
+    },
+    {
+      title: 'GeoRoute API',
+      description: 'API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.',
+      tech: ['Java', 'Spring Boot', 'Google Maps API', 'NeonDB'],
+      github: 'https://github.com/Thalisson-DEV/GeoRoute-C-API',
+      linkedin: 'https://www.linkedin.com/posts/thalisson-dami%C3%A3o_java-springboot-fullstack-activity-7354621537766760448-JRyc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNEKNgBD06ou2uKKbE4OTAymtbAS9nJfbI'
     }
   ];
 }

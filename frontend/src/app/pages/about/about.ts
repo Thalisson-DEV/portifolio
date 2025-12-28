@@ -39,12 +39,13 @@ import { CommonModule } from '@angular/common';
           </div>
           
           <div class="p-6 pb-12 overflow-x-auto">
-            <pre><code><span class="text-code-keyword">public class</span> <span class="text-yellow-400">ThalissonDeveloper</span> <span class="text-code-keyword">extends</span> <span class="text-code-class">BackendDev</span> &#123;
+            <pre><code><span class="text-code-keyword">public class</span> <span class="text-yellow-400">Thalisson</span> <span class="text-code-keyword">extends</span> <span class="text-code-class">BackendDev</span> &#123;
   
   <span class="text-code-keyword">private final</span> String focus = <span class="text-code-string">"Java & Spring"</span>;
   <span class="text-code-keyword">private</span> String[] hardSkills = &#123;
-    <span class="text-code-string">"Java 21"</span>, <span class="text-code-string">"Spring Boot"</span>, <span class="text-code-string">"Docker"</span>,
-    <span class="text-code-string">"PostgreSQL"</span>, <span class="text-code-string">"LangChain4j"</span>
+    <span class="text-code-string">"Java"</span>, <span class="text-code-string">"Spring Boot"</span>, <span class="text-code-string">"Docker"</span>,
+    <span class="text-code-string">"PostgreSQL"</span>, <span class="text-code-string">"LangChain4j"</span>, <span class="text-code-string">"Git & GitHub"</span>,
+    <span class="text-code-string">"Redis"</span>, <span class="text-code-string">"Angular"</span>
   &#125;;
 
   <span class="text-code-keyword">public</span> <span class="text-code-class">void</span> <span class="text-blue-400">code</span>() &#123;
