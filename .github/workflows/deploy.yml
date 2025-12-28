@@ -1,0 +1,95 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Baixa o código
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Configura Java e Compila Backend
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Build Backend with Maven
+        working-directory: ./backend
+        run: mvn clean package -DskipTests
+
+      # 3. Login no Docker Hub
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 4. Cria Imagem Docker e Envia pro Hub
+      - name: Build & Push Backend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-backend:latest
+
+      - name: Build & Push Frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-frontend:latest
+
+      # 5. Entra na Hostinger e Atualiza tudo
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            mkdir -p ~/app
+            cd ~/app
+
+            docker compose down || true
+
+            echo "EMAIL=${{ secrets.EMAIL }}" > .env
+            echo "EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}" >> .env
+
+            cat <<EOF > docker-compose.yml
+            services:
+              backend:
+                image: ${{ secrets.DOCKER_USERNAME }}/portfolio-backend:latest
+                container_name: backend-container
+                restart: always
+                environment:
+                  - EMAIL=\${EMAIL}
+                  - EMAIL_PASSWORD=\${EMAIL_PASSWORD}
+                networks:
+                  - portfolio-network
+            
+              frontend:
+                image: ${{ secrets.DOCKER_USERNAME }}/portfolio-frontend:latest
+                container_name: frontend-container
+                restart: always
+                ports:
+                  - "80:80"
+                depends_on:
+                  - backend
+                networks:
+                  - portfolio-network
+
+            networks:
+              portfolio-network:
+                driver: bridge
+            EOF
+
+            docker compose pull
+            docker compose up -d
+            
+            docker system prune -f
