@@ -21,11 +21,42 @@ import { CommonModule } from '@angular/common';
           </div>
 
           <div>
-            <h3 class="text-xl font-bold text-white mb-4">Tech Stack</h3>
-            <div class="flex flex-wrap gap-3">
-              <span *ngFor="let skill of skills" class="px-3 py-1 bg-gray-800 text-neon-green border border-gray-700 rounded font-mono text-sm hover:border-neon-green transition">
-                {{ skill }}
-              </span>
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold text-white">Tech Stack</h3>
+              
+              <button 
+                (click)="toggleView()" 
+                class="text-[10px] uppercase tracking-wider text-gray-600 hover:text-neon-green transition-colors cursor-pointer select-none flex items-center gap-1 focus:outline-none"
+                [title]="showIcons ? 'Ver nomes' : 'Ver ícones'">
+                <i [class]="showIcons ? 'devicon-bash-plain' : 'devicon-devicon-plain'"></i>
+                {{ showIcons ? 'Ver Nomes' : 'Ver Ícones' }}
+              </button>
+            </div>
+
+            <div class="min-h-[100px]"> <div *ngIf="!showIcons" class="flex flex-wrap gap-3 animate-fade-in">
+                <span *ngFor="let skill of skills" class="px-3 py-1 bg-gray-800 text-neon-green border border-gray-700 rounded font-mono text-sm hover:border-neon-green transition hover:bg-gray-700 cursor-default">
+                  {{ skill }}
+                </span>
+              </div>
+
+              <div *ngIf="showIcons" class="flex flex-wrap gap-6 animate-fade-in items-center">
+                <ng-container *ngFor="let skill of skills">
+                  <div class="group relative flex flex-col items-center">
+                    <i *ngIf="getIconClass(skill)" 
+                       [class]="getIconClass(skill) + ' text-4xl text-gray-500 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'">
+                    </i>
+                    
+                    <span *ngIf="!getIconClass(skill)" class="px-2 py-1 border border-gray-700 rounded text-xs text-gray-500 font-mono hover:text-white hover:border-white transition">
+                      {{ skill }}
+                    </span>
+
+                    <span *ngIf="getIconClass(skill)" class="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] text-white bg-gray-900 px-2 py-1 rounded border border-gray-700 whitespace-nowrap z-10 pointer-events-none">
+                      {{ skill }}
+                    </span>
+                  </div>
+                </ng-container>
+              </div>
+
             </div>
           </div>
         </div>
@@ -67,12 +98,47 @@ import { CommonModule } from '@angular/common';
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .animate-fade-in {
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `]
 })
 export class AboutComponent {
+  
+  showIcons = false; // Começa como texto
+
+  toggleView() {
+    this.showIcons = !this.showIcons;
+  }
+
   skills = [
     'Java', 'Spring Boot', 'Spring Security', 'JPA/Hibernate',
     'Docker', 'PostgreSQL', 'Redis', 'Git Flow',
     'Angular', 'TypeScript', 'Power Apps'
   ];
+
+  // Mapeamento específico para a página About
+  techIconMap: { [key: string]: string } = {
+    'Java': 'devicon-java-plain',
+    'Spring Boot': 'devicon-spring-original',
+    'Spring Security': 'devicon-spring-plain', // Ícone genérico do Spring
+    'JPA/Hibernate': 'devicon-hibernate-plain', // Mapeado para Hibernate
+    'Docker': 'devicon-docker-plain',
+    'PostgreSQL': 'devicon-postgresql-plain',
+    'Redis': 'devicon-redis-plain',
+    'Git Flow': 'devicon-git-plain',
+    'Angular': 'devicon-angularjs-plain',
+    'TypeScript': 'devicon-typescript-plain',
+    'Power Apps': 'devicon-microsoft-plain'
+  };
+
+  getIconClass(skillName: string): string {
+    return this.techIconMap[skillName] || '';
+  }
 }
