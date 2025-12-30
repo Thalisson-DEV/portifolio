@@ -121,7 +121,7 @@ export class ProjectsComponent {
       description: 'Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.',
       tech: ['Java', 'Spring Boot', 'Typescript', 'Angular', 'Tailwind CSS', 'Docker', 'Github Actions'],
       github: 'https://github.com/Thalisson-DEV/portifolio',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/posts/thalisson-dami%C3%A3o_java-springboot-angular-activity-7411796301253844992-YGQx?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNEKNgBD06ou2uKKbE4OTAymtbAS9nJfbI',
       showIcons: false
     },
     {
