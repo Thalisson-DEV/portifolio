@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
       <div class="max-w-7xl mx-auto px-4 w-full z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         <div class="text-center md:text-left order-2 md:order-1">
-          <p class="font-mono text-neon-green mb-4 text-lg">System.out.println("Hello World! I am")</p>
+          <p class="font-mono text-neon-green mb-4 text-lg" i18n="@@homeGreeting">System.out.println("Hello World! I am")</p>
           
           <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white tracking-tight">
             Thalisson Damião
@@ -29,14 +29,14 @@ import { CommonModule } from '@angular/common';
           </div>
           
           <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-            <a href="cv.pdf" download class="px-8 py-3 border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-white transition rounded cursor-pointer">
+            <a href="cv.pdf" download class="px-8 py-3 border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-white transition rounded cursor-pointer" i18n="@@homeDownloadCV">
               Download CV
             </a>
-            <a href="https://github.com/Thalisson-DEV" target="_blank" class="px-6 py-3 bg-gray-800 text-white font-mono hover:bg-gray-700 transition rounded flex items-center justify-center gap-2">
-              <i class="devicon-github-original"></i>
+            <a href="https://github.com/Thalisson-DEV" target="_blank" aria-label="Visit my GitHub Profile" class="px-6 py-3 bg-gray-800 text-white font-mono hover:bg-gray-700 transition rounded flex items-center justify-center gap-2">
+              <i class="devicon-github-original" aria-hidden="true"></i>
             </a>
-            <a href="https://linkedin.com/in/thalisson-damião" target="_blank" class="px-6 py-3 bg-blue-700 text-white font-mono hover:bg-blue-600 transition rounded flex items-center justify-center gap-2">
-              <i class="devicon-linkedin-plain"></i>
+            <a href="https://linkedin.com/in/thalisson-damião" target="_blank" aria-label="Visit my LinkedIn Profile" class="px-6 py-3 bg-blue-700 text-white font-mono hover:bg-blue-600 transition rounded flex items-center justify-center gap-2">
+              <i class="devicon-linkedin-plain" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -45,7 +45,7 @@ import { CommonModule } from '@angular/common';
           <div class="absolute inset-0 bg-gradient-to-tr from-neon-green/20 to-transparent rounded-full blur-2xl transform scale-90"></div>
           <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-tr from-neon-green via-gray-800 to-gray-800 shadow-2xl">
             <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 border-4 border-gray-900">
-               <img src="me.jpg" alt="Thalisson" class="w-full h-full object-cover">
+               <img src="me.webp" alt="Thalisson Damião - Portfolio Profile Picture" width="320" height="320" fetchpriority="high" loading="eager" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
@@ -59,10 +59,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private cdr = inject(ChangeDetectorRef);
 
   phrases: string[] = [
-    "Back-End Developer",
-    "Java & Spring Specialist",
-    "Docker & Cloud Enthusiast",
-    "Solving complex problems"
+    $localize`:@@homeRoleBackend:Back-End Developer`,
+    $localize`:@@homeRoleJava:Java & Spring Specialist`,
+    $localize`:@@homeRoleDocker:Docker & Cloud Enthusiast`,
+    $localize`:@@homeRoleSolving:Solving complex problems`
   ];
   
   displayText: string = "";

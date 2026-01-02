@@ -18,42 +18,54 @@ interface RestException {
   imports: [CommonModule, FormsModule], 
   template: `
     <div class="pt-24 pb-12 px-4 max-w-4xl mx-auto text-center md:text-left">
-      <h2 class="text-3xl font-bold text-white mb-8 text-center"><span class="text-neon-green">03.</span> Get In Touch</h2>
+      <h2 class="text-3xl font-bold text-white mb-8 text-center"><span class="text-neon-green">03.</span> <span i18n="@@contactTitle">Get In Touch</span></h2>
       
-      <p class="text-gray-400 text-center max-w-xl mx-auto mb-12">
-        Atualmente estou aberto a novas oportunidades como Desenvolvedor Júnior. 
-        Minha caixa de entrada está sempre aberta!
+      <p class="text-gray-400 text-center max-w-xl mx-auto mb-12" i18n="@@contactDesc">
+        Currently open to new opportunities as a Junior Developer. 
+        My inbox is always open!
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="bg-terminal-gray p-6 rounded border border-gray-700 h-fit">
-            <h3 class="text-white font-mono mb-4">> contact_info</h3>
+            <h3 class="text-white font-mono mb-4" i18n="@@contactInfoTitle">> contact_info</h3>
             <ul class="space-y-4 text-gray-400">
                 <li class="flex items-center gap-3 hover:text-neon-green transition">
-                    <i class="devicon-github-original"></i> github.com/Thalisson-DEV
+                    <i class="devicon-github-original" aria-hidden="true"></i> 
+                    <a href="https://github.com/Thalisson-DEV" target="_blank" class="hover:underline">github.com/Thalisson-DEV</a>
                 </li>
                 <li class="flex items-center gap-3 hover:text-neon-green transition">
-                    <i class="devicon-linkedin-plain"></i> linkedin.com/in/thalisson-damião
-                </li>
-                <li class="flex items-center gap-3 hover:text-neon-green transition">
-                    <span>✉️</span> thalissondamiao1@gmail.com
+                    <i class="devicon-linkedin-plain" aria-hidden="true"></i> 
+                    <a href="https://linkedin.com/in/thalisson-damião" target="_blank" class="hover:underline">linkedin.com/in/thalisson-damião</a>
                 </li>
             </ul>
         </div>
 
-        <form (ngSubmit)="sendMessage()" class="space-y-4">
-          <input type="text" [(ngModel)]="form.name" name="name" placeholder="Name" [disabled]="isLoading"
-                 class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50">
+        <form (ngSubmit)="sendMessage()" class="space-y-4" aria-label="Contact form">
+          <div class="relative">
+            <label for="name" class="sr-only" i18n="@@contactLabelName">Name</label>
+            <input type="text" id="name" [(ngModel)]="form.name" name="name" placeholder="Name" i18n-placeholder="@@contactPlaceholderName" [disabled]="isLoading" autocomplete="name"
+                   class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
+                   aria-required="true">
+          </div>
           
-          <input type="email" [(ngModel)]="form.email" name="email" placeholder="Email" [disabled]="isLoading"
-                 class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50">
+          <div class="relative">
+            <label for="email" class="sr-only" i18n="@@contactLabelEmail">Email</label>
+            <input type="email" id="email" [(ngModel)]="form.email" name="email" placeholder="Email" i18n-placeholder="@@contactPlaceholderEmail" [disabled]="isLoading" autocomplete="email"
+                   class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
+                   aria-required="true">
+          </div>
           
-          <textarea [(ngModel)]="form.message" name="message" rows="4" placeholder="Message" [disabled]="isLoading"
-                    class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"></textarea>
+          <div class="relative">
+            <label for="message" class="sr-only" i18n="@@contactLabelMessage">Message</label>
+            <textarea id="message" [(ngModel)]="form.message" name="message" rows="4" placeholder="Message" i18n-placeholder="@@contactPlaceholderMessage" [disabled]="isLoading"
+                      class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
+                      aria-required="true"></textarea>
+          </div>
           
           <button type="submit" [disabled]="isLoading"
                   class="w-full py-3 bg-transparent border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-white transition rounded disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500">
-            {{ isLoading ? 'Sending Packet...' : 'Send Message' }}
+            <span *ngIf="isLoading" i18n="@@contactButtonSending">Sending Packet...</span>
+            <span *ngIf="!isLoading" i18n="@@contactButtonSend">Send Message</span>
           </button>
         </form>
       </div>

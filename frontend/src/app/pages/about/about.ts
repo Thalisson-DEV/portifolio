@@ -11,25 +11,27 @@ import { CommonModule } from '@angular/common';
         
         <div class="space-y-8">
           <div>
-            <h2 class="text-3xl font-bold text-white mb-4"><span class="text-neon-green">01.</span> About-me</h2>
-            <p class="text-gray-400 leading-relaxed">
-              Desenvolvedor Back-End com forte base em <strong class="text-white">Java e ecossistema Spring</strong>. 
-              Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única.
-              Atualmente transformo regras de negócio complexas em código limpo, testável e escalável.
-              Apaixonado por otimizar queries SQL e criar APIs RESTful robustas.
+            <h2 class="text-3xl font-bold text-white mb-4"><span class="text-neon-green">01.</span> <span i18n="@@aboutTitle">About-me</span></h2>
+            <p class="text-gray-400 leading-relaxed" i18n="@@aboutBio">
+              Back-End Developer with a strong foundation in <strong class="text-white">Java and the Spring ecosystem</strong>. 
+              Coming from a background in Data and Occupational Safety, which gave me a unique analytical perspective.
+              Currently, I transform complex business rules into clean, testable, and scalable code.
+              Passionate about optimizing SQL queries and creating robust RESTful APIs.
             </p>
           </div>
 
           <div>
             <div class="flex justify-between items-center mb-4">
-              <h3 class="text-xl font-bold text-white">Tech Stack</h3>
+              <h3 class="text-xl font-bold text-white" i18n="@@aboutTechStack">Tech Stack</h3>
               
               <button 
                 (click)="toggleView()" 
                 class="text-[10px] uppercase tracking-wider text-gray-600 hover:text-neon-green transition-colors cursor-pointer select-none flex items-center gap-1 focus:outline-none"
-                [title]="showIcons ? 'Ver nomes' : 'Ver ícones'">
-                <i [class]="showIcons ? 'devicon-bash-plain' : 'devicon-devicon-plain'"></i>
-                {{ showIcons ? 'Ver Nomes' : 'Ver Ícones' }}
+                [attr.aria-label]="showIcons ? 'Switch to text view' : 'Switch to icon view'"
+                [title]="showIcons ? 'View Names' : 'View Icons'">
+                <i [class]="showIcons ? 'devicon-bash-plain' : 'devicon-devicon-plain'" aria-hidden="true"></i>
+                <span *ngIf="showIcons" i18n="@@aboutViewNames">View Names</span>
+                <span *ngIf="!showIcons" i18n="@@aboutViewIcons">View Icons</span>
               </button>
             </div>
 
@@ -41,9 +43,10 @@ import { CommonModule } from '@angular/common';
 
               <div *ngIf="showIcons" class="flex flex-wrap gap-6 animate-fade-in items-center">
                 <ng-container *ngFor="let skill of skills">
-                  <div class="group relative flex flex-col items-center">
+                  <div class="group relative flex flex-col items-center" tabindex="0" [attr.aria-label]="skill">
                     <i *ngIf="getIconClass(skill)" 
-                       [class]="getIconClass(skill) + ' text-4xl text-gray-500 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'">
+                       [class]="getIconClass(skill) + ' text-4xl text-gray-500 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'"
+                       aria-hidden="true">
                     </i>
                     
                     <span *ngIf="!getIconClass(skill)" class="px-2 py-1 border border-gray-700 rounded text-xs text-gray-500 font-mono hover:text-white hover:border-white transition">

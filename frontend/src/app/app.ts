@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
+import { FooterComponent } from './components/footer/footer';
 import { CommonModule } from '@angular/common';
 import { fadeAnimation } from './animations'; // <--- Importe sua animação de volta
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CommonModule],
   template: `
     <div class="flex flex-col min-h-screen bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
       
@@ -21,9 +22,7 @@ import { fadeAnimation } from './animations'; // <--- Importe sua animação de 
 
       </main>
 
-      <footer class="text-center py-6 text-gray-600 font-mono text-sm w-full bg-[#0a0a0a] border-t border-gray-900 z-10">
-        <p>Built with Coffee☕ by Thalisson</p>
-      </footer>
+      <app-footer></app-footer>
 
     </div>
   `,

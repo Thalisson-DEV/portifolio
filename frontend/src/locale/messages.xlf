@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="navHello" datatype="html">
+        <source>_hello</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navAbout" datatype="html">
+        <source>_about-me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navProjects" datatype="html">
+        <source>_projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navContact" datatype="html">
+        <source>_contact-me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutTitle" datatype="html">
+        <source>About-me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutBio" datatype="html">
+        <source> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutTechStack" datatype="html">
+        <source>Tech Stack</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutViewNames" datatype="html">
+        <source>Ver Nomes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutViewIcons" datatype="html">
+        <source>Ver Ícones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactTitle" datatype="html">
+        <source>Get In Touch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactDesc" datatype="html">
+        <source> Atualmente estou aberto a novas oportunidades como Desenvolvedor. Minha caixa de entrada está sempre aberta! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactInfoTitle" datatype="html">
+        <source>&gt; contact_info</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactLabelName" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderName" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactLabelEmail" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderEmail" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactLabelMessage" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderMessage" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactButtonSending" datatype="html">
+        <source>Sending Packet...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactButtonSend" datatype="html">
+        <source>Send Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeGreeting" datatype="html">
+        <source>System.out.println(&quot;Hello World! I am&quot;)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeDownloadCV" datatype="html">
+        <source> Download CV </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRoleBackend" datatype="html">
+        <source>Back-End Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRoleJava" datatype="html">
+        <source>Java &amp; Spring Specialist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRoleDocker" datatype="html">
+        <source>Docker &amp; Cloud Enthusiast</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRoleSolving" datatype="html">
+        <source>Solving complex problems</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectsTitle" datatype="html">
+        <source>Projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectPortfolioDesc" datatype="html">
+        <source>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectBackpackDesc" datatype="html">
+        <source>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectLangchainDesc" datatype="html">
+        <source>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDesc" datatype="html">
+        <source>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectGeorouteDesc" datatype="html">
+        <source>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

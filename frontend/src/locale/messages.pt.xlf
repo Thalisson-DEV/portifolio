@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="pt" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="navHello" datatype="html">
+        <source>_hello</source>
+        <target>_início</target>
+      </trans-unit>
+      <trans-unit id="navAbout" datatype="html">
+        <source>_about-me</source>
+        <target>_sobre-mim</target>
+      </trans-unit>
+      <trans-unit id="navProjects" datatype="html">
+        <source>_projects</source>
+        <target>_projetos</target>
+      </trans-unit>
+      <trans-unit id="navContact" datatype="html">
+        <source>_contact-me</source>
+        <target>_contato</target>
+      </trans-unit>
+      <trans-unit id="aboutTitle" datatype="html">
+        <source>About-me</source>
+        <target>Sobre mim</target>
+      </trans-unit>
+      <trans-unit id="aboutBio" datatype="html">
+        <source> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </source>
+        <target> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </target>
+      </trans-unit>
+      <trans-unit id="aboutTechStack" datatype="html">
+        <source>Tech Stack</source>
+        <target>Tecnologias</target>
+      </trans-unit>
+      <trans-unit id="aboutViewNames" datatype="html">
+        <source>Ver Nomes</source>
+        <target>Ver Nomes</target>
+      </trans-unit>
+      <trans-unit id="aboutViewIcons" datatype="html">
+        <source>Ver Ícones</source>
+        <target>Ver Ícones</target>
+      </trans-unit>
+      <trans-unit id="contactTitle" datatype="html">
+        <source>Get In Touch</source>
+        <target>Entre em Contato</target>
+      </trans-unit>
+      <trans-unit id="contactDesc" datatype="html">
+        <source> Atualmente estou aberto a novas oportunidades como Desenvolvedor. Minha caixa de entrada está sempre aberta! </source>
+        <target> Atualmente estou aberto a novas oportunidades como Desenvolvedor. Minha caixa de entrada está sempre aberta! </target>
+      </trans-unit>
+      <trans-unit id="contactInfoTitle" datatype="html">
+        <source>&gt; contact_info</source>
+        <target>&gt; informações_contato</target>
+      </trans-unit>
+      <trans-unit id="contactLabelName" datatype="html">
+        <source>Name</source>
+        <target>Nome</target>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderName" datatype="html">
+        <source>Name</source>
+        <target>Nome</target>
+      </trans-unit>
+      <trans-unit id="contactLabelEmail" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderEmail" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="contactLabelMessage" datatype="html">
+        <source>Message</source>
+        <target>Mensagem</target>
+      </trans-unit>
+      <trans-unit id="contactPlaceholderMessage" datatype="html">
+        <source>Message</source>
+        <target>Mensagem</target>
+      </trans-unit>
+      <trans-unit id="contactButtonSending" datatype="html">
+        <source>Sending Packet...</source>
+        <target>Enviando Pacote...</target>
+      </trans-unit>
+      <trans-unit id="contactButtonSend" datatype="html">
+        <source>Send Message</source>
+        <target>Enviar Mensagem</target>
+      </trans-unit>
+      <trans-unit id="homeGreeting" datatype="html">
+        <source>System.out.println(&quot;Hello World! I am&quot;)</source>
+        <target>System.out.println(&quot;Olá Mundo! Eu sou&quot;)</target>
+      </trans-unit>
+      <trans-unit id="homeDownloadCV" datatype="html">
+        <source> Download CV </source>
+        <target> Baixar CV </target>
+      </trans-unit>
+      <trans-unit id="homeRoleBackend" datatype="html">
+        <source>Back-End Developer</source>
+        <target>Desenvolvedor Back-End</target>
+      </trans-unit>
+      <trans-unit id="homeRoleJava" datatype="html">
+        <source>Java &amp; Spring Specialist</source>
+        <target>Especialista Java &amp; Spring</target>
+      </trans-unit>
+      <trans-unit id="homeRoleDocker" datatype="html">
+        <source>Docker &amp; Cloud Enthusiast</source>
+        <target>Entusiasta Docker &amp; Cloud</target>
+      </trans-unit>
+      <trans-unit id="homeRoleSolving" datatype="html">
+        <source>Solving complex problems</source>
+        <target>Resolvendo problemas complexos</target>
+      </trans-unit>
+      <trans-unit id="projectsTitle" datatype="html">
+        <source>Projects</source>
+        <target>Projetos</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolioDesc" datatype="html">
+        <source>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</source>
+        <target>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</target>
+      </trans-unit>
+      <trans-unit id="projectBackpackDesc" datatype="html">
+        <source>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</source>
+        <target>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</target>
+      </trans-unit>
+      <trans-unit id="projectLangchainDesc" datatype="html">
+        <source>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</source>
+        <target>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDesc" datatype="html">
+        <source>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</source>
+        <target>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteDesc" datatype="html">
+        <source>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</source>
+        <target>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
