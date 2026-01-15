@@ -15,13 +15,13 @@ interface RestException {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule],
   template: `
     <div class="pt-24 pb-12 px-4 max-w-4xl mx-auto text-center md:text-left">
       <h2 class="text-3xl font-bold text-white mb-8 text-center"><span class="text-neon-green">03.</span> <span i18n="@@contactTitle">Get In Touch</span></h2>
-      
+
       <p class="text-gray-400 text-center max-w-xl mx-auto mb-12" i18n="@@contactDesc">
-        Currently open to new opportunities as a Junior Developer. 
+        Currently open to new opportunities as a Junior Developer.
         My inbox is always open!
       </p>
 
@@ -30,11 +30,11 @@ interface RestException {
             <h3 class="text-white font-mono mb-4" i18n="@@contactInfoTitle">> contact_info</h3>
             <ul class="space-y-4 text-gray-400">
                 <li class="flex items-center gap-3 hover:text-neon-green transition">
-                    <i class="devicon-github-original" aria-hidden="true"></i> 
+                    <i class="devicon-github-original" aria-hidden="true"></i>
                     <a href="https://github.com/Thalisson-DEV" target="_blank" class="hover:underline">github.com/Thalisson-DEV</a>
                 </li>
                 <li class="flex items-center gap-3 hover:text-neon-green transition">
-                    <i class="devicon-linkedin-plain" aria-hidden="true"></i> 
+                    <i class="devicon-linkedin-plain" aria-hidden="true"></i>
                     <a href="https://linkedin.com/in/thalisson-damião" target="_blank" class="hover:underline">linkedin.com/in/thalisson-damião</a>
                 </li>
             </ul>
@@ -47,21 +47,21 @@ interface RestException {
                    class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
                    aria-required="true">
           </div>
-          
+
           <div class="relative">
             <label for="email" class="sr-only" i18n="@@contactLabelEmail">Email</label>
             <input type="email" id="email" [(ngModel)]="form.email" name="email" placeholder="Email" i18n-placeholder="@@contactPlaceholderEmail" [disabled]="isLoading" autocomplete="email"
                    class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
                    aria-required="true">
           </div>
-          
+
           <div class="relative">
             <label for="message" class="sr-only" i18n="@@contactLabelMessage">Message</label>
             <textarea id="message" [(ngModel)]="form.message" name="message" rows="4" placeholder="Message" i18n-placeholder="@@contactPlaceholderMessage" [disabled]="isLoading"
                       class="w-full bg-gray-800 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none font-mono disabled:opacity-50"
                       aria-required="true"></textarea>
           </div>
-          
+
           <button type="submit" [disabled]="isLoading"
                   class="w-full py-3 bg-transparent border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-white transition rounded disabled:cursor-not-allowed disabled:border-gray-500 disabled:text-gray-500">
             <span *ngIf="isLoading" i18n="@@contactButtonSending">Sending Packet...</span>
@@ -85,10 +85,14 @@ export class ContactComponent {
 
   constructor(
     private contactService: ContactService,
-    private cdr: ChangeDetectorRef 
+    private cdr: ChangeDetectorRef
   ) {}
 
   sendMessage() {
+    if(!this.form.email.includes("@") || !this.form.email.includes(".")) {
+      this.setErrorLog("Validation Failed", "Invalid Email");
+      return;
+    }
     if(!this.form.name || !this.form.email || !this.form.message) {
         this.setErrorLog("Validation Failed", "All fields are required locally.");
         return;
@@ -102,7 +106,7 @@ export class ContactComponent {
       .pipe(
         finalize(() => {
           this.isLoading = false;
-          this.cdr.detectChanges(); 
+          this.cdr.detectChanges();
         })
       )
       .subscribe({
@@ -135,7 +139,7 @@ export class ContactComponent {
   "detail": "Unexpected response structure."
 }`;
           }
-          this.cdr.detectChanges(); 
+          this.cdr.detectChanges();
         }
       });
   }

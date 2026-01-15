@@ -7,27 +7,27 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      
+
       <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
         <div class="absolute right-0 top-0 w-96 h-96 bg-neon-green rounded-full blur-[150px]"></div>
         <div class="absolute left-0 bottom-0 w-96 h-96 bg-blue-900 rounded-full blur-[150px]"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 w-full z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
+
         <div class="text-center md:text-left order-2 md:order-1">
           <p class="font-mono text-neon-green mb-4 text-lg" i18n="@@homeGreeting">System.out.println("Hello World! I am")</p>
-          
+
           <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white tracking-tight">
             Thalisson Damião
           </h1>
-          
+
           <div class="h-10 mb-8 font-mono text-xl md:text-2xl text-gray-400 flex justify-center md:justify-start items-center">
             <span class="mr-2 text-neon-green">></span>
             <span class="text-white min-h-[30px]">{{ displayText }}</span>
             <span class="animate-pulse text-neon-green ml-1">|</span>
           </div>
-          
+
           <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
             <a href="cv.pdf" download class="px-8 py-3 border border-neon-green text-neon-green font-mono hover:bg-neon-green hover:text-white transition rounded cursor-pointer" i18n="@@homeDownloadCV">
               Download CV
@@ -64,9 +64,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     $localize`:@@homeRoleDocker:Docker & Cloud Enthusiast`,
     $localize`:@@homeRoleSolving:Solving complex problems`
   ];
-  
+
   displayText: string = "";
-  
+
   private loopNum = 0;
   private isDeleting = false;
   private typingSpeed = 100; // Velocidade normal
@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (!this.isDeleting && this.displayText === fullText) {
       delta = this.pauseTime;
       this.isDeleting = true;
-    } 
+    }
     else if (this.isDeleting && this.displayText === '') {
       this.isDeleting = false;
       this.loopNum++;
