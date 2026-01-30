@@ -114,7 +114,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent {
   
-  showIcons = false; // Começa como texto
+  showIcons = true; // Começa como ícones
 
   toggleView() {
     this.showIcons = !this.showIcons;
