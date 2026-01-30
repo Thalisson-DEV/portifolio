@@ -127,7 +127,7 @@ interface Project {
             
             <!-- Technologies -->
             <div>
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-3 font-semibold">Technologies</h4>
+              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-3 font-semibold" i18n="@@projectTechnologies">Technologies</h4>
               <div class="flex flex-wrap gap-2">
                 <span *ngFor="let tech of selectedProject.tech" class="text-xs font-mono text-neon-green/90 bg-neon-green/10 px-2 py-1 rounded border border-neon-green/20">
                   {{ tech }}
@@ -137,13 +137,13 @@ interface Project {
 
             <!-- Description -->
             <div *ngIf="selectedProject.detailedDescription">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold">About</h4>
+              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectAbout">About</h4>
               <p class="text-gray-300 leading-relaxed">{{ selectedProject.detailedDescription }}</p>
             </div>
 
             <!-- Objectives -->
             <div *ngIf="selectedProject.objectives && selectedProject.objectives.length > 0">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold">Objectives</h4>
+              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectObjectives">Objectives</h4>
               <ul class="list-disc list-inside space-y-1 text-gray-300">
                 <li *ngFor="let obj of selectedProject.objectives">{{ obj }}</li>
               </ul>
@@ -151,7 +151,7 @@ interface Project {
 
             <!-- Gains -->
             <div *ngIf="selectedProject.gains && selectedProject.gains.length > 0">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold">Key Gains</h4>
+              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectKeyGains">Key Gains</h4>
               <ul class="list-none space-y-2">
                 <li *ngFor="let gain of selectedProject.gains" class="flex items-start gap-2 text-gray-300">
                   <span class="text-neon-green mt-1">✓</span>
@@ -213,7 +213,7 @@ export class ProjectsComponent {
     'Cache': 'devicon-redis-plain',
     'Power Apps': 'devicon-microsoft-plain',
     'Prometheus': 'devicon-prometheus-original',
-    'Grafana': 'devicon-grafana-original'
+    'Grafana': 'devicon-grafana-plain'
   };
 
   getIconClass(techName: string): string {
@@ -224,18 +224,18 @@ export class ProjectsComponent {
     {
       title: 'GeoRoute',
       description: $localize`:@@projectGeorouteDesc:Corporate Full Stack solution for logistics optimization with real-time geolocation.`,
-      detailedDescription: 'The Sipel Logistics Helper (codenamed GeoRoute) is a corporate Full Stack solution designed to optimize the logistical operations of Sipel Construções LTDA. It centralizes critical client and infrastructure data, integrating it with geolocation services to facilitate route planning and field service.',
+      detailedDescription: $localize`:@@projectGeorouteDetailed:The Sipel Logistics Helper (codenamed GeoRoute) is a corporate Full Stack solution designed to optimize the logistical operations of Sipel Construções LTDA. It centralizes critical client and infrastructure data, integrating it with geolocation services to facilitate route planning and field service.`,
       objectives: [
-        'Centralize querying of Installations, Contract Accounts, and Network Assets.',
-        'Offer unified and fast searches with automatic data type detection.',
-        'Integrate directly with Google Maps for navigation to service points.',
-        'Process large volumes of data asynchronously via CSV.'
+        $localize`:@@projectGeorouteObj1:Centralize querying of Installations, Contract Accounts, and Network Assets.`,
+        $localize`:@@projectGeorouteObj2:Offer unified and fast searches with automatic data type detection.`,
+        $localize`:@@projectGeorouteObj3:Integrate directly with Google Maps for navigation to service points.`,
+        $localize`:@@projectGeorouteObj4:Process large volumes of data asynchronously via CSV.`
       ],
       gains: [
-        'Optimization of logistical operations.',
-        'High performance in the backend due to Redis caching.',
-        'Robust security with JWT/Spring Security.',
-        'Real-time monitoring capabilities with Prometheus/Grafana.'
+        $localize`:@@projectGeorouteGain1:Receiving over 200 requests per day.`,
+        $localize`:@@projectGeorouteGain2:Guaranteeing the localization of over 6,000 customers per month.`,
+        $localize`:@@projectGeorouteGain3:Optimizing logistics by 93%.`,
+        $localize`:@@projectGeorouteGain4:Replaced a complex mobile spreadsheet workflow with an intuitive interface for users with limited IT knowledge.`
       ],
       tech: ['Java', 'Spring Boot', 'Redis', 'Angular', 'Tailwind CSS', 'Docker', 'Prometheus', 'Grafana', 'Google Maps API'],
       github: 'https://github.com/Thalisson-DEV/georoute',
@@ -245,11 +245,11 @@ export class ProjectsComponent {
     {
       title: 'Portifolio',
       description: $localize`:@@projectPortfolioDesc:My personal portfolio developed with Angular and Spring, highlighting my skills and projects.`,
-      detailedDescription: 'My personal professional portfolio developed to showcase my skills, experience, and software development projects. It serves as a central hub for my professional identity, demonstrating my proficiency in the Angular and Spring Boot ecosystem.',
+      detailedDescription: $localize`:@@projectPortfolioDetailed:My personal professional portfolio developed to showcase my skills, experience, and software development projects. It serves as a central hub for my professional identity, demonstrating my proficiency in the Angular and Spring Boot ecosystem.`,
       objectives: [
-        'Present my work in a clean, modern, and accessible way.',
-        'Showcase my projects and technical skills.',
-        'Provide a contact channel for professional opportunities.'
+        $localize`:@@projectPortfolioObj1:Present my work in a clean, modern, and accessible way.`,
+        $localize`:@@projectPortfolioObj2:Showcase my projects and technical skills.`,
+        $localize`:@@projectPortfolioObj3:Provide a contact channel for professional opportunities.`
       ],
       gains: [],
       tech: ['Java', 'Spring Boot', 'Typescript', 'Angular', 'Tailwind CSS', 'Docker', 'Github Actions'],
@@ -260,11 +260,11 @@ export class ProjectsComponent {
     {
       title: 'LangChain4j Integration',
       description: $localize`:@@projectLangchainDesc:Backend exploring RAG and Generative AI in the Java ecosystem.`,
-      detailedDescription: 'A backend project exploring Retrieval-Augmented Generation (RAG) and Generative AI within the Java ecosystem. It integrates with Large Language Models (LLMs) to process natural language and provide intelligent responses based on context.',
+      detailedDescription: $localize`:@@projectLangchainDetailed:A backend project exploring Retrieval-Augmented Generation (RAG) and Generative AI within the Java ecosystem. It integrates with Large Language Models (LLMs) to process natural language and provide intelligent responses based on context.`,
       objectives: [
-        'Explore and master the integration of Java with modern AI tools.',
-        'Implement RAG patterns for enhanced context awareness.',
-        'Test integration with Gemini and other LLMs.'
+        $localize`:@@projectLangchainObj1:Explore and master the integration of Java with modern AI tools.`,
+        $localize`:@@projectLangchainObj2:Implement RAG patterns for enhanced context awareness.`,
+        $localize`:@@projectLangchainObj3:Test integration with Gemini and other LLMs.`
       ],
       gains: [],
       tech: ['Java', 'Spring Boot', 'LangChain4j', 'Gemini'],
@@ -275,11 +275,11 @@ export class ProjectsComponent {
     {
       title: 'Desafio Angular API',
       description: $localize`:@@projectAngularApiDesc:Backend for Angular developer technical challenge. Implementation of RESTful APIs.`,
-      detailedDescription: 'A backend application built as a technical challenge for an Angular developer position. It implements a robust set of RESTful APIs, focusing on best practices, data validation, and efficient database interactions.',
+      detailedDescription: $localize`:@@projectAngularApiDetailed:A backend application built as a technical challenge for an Angular developer position. It implements a robust set of RESTful APIs, focusing on best practices, data validation, and efficient database interactions.`,
       objectives: [
-        'Demonstrate solid knowledge of REST principles.',
-        'Implement secure and efficient endpoints using Spring Boot.',
-        'Showcase database integration and Docker containerization.'
+        $localize`:@@projectAngularApiObj1:Demonstrate solid knowledge of REST principles.`,
+        $localize`:@@projectAngularApiObj2:Implement secure and efficient endpoints using Spring Boot.`,
+        $localize`:@@projectAngularApiObj3:Showcase database integration and Docker containerization.`
       ],
       gains: [],
       tech: ['Java', 'Spring Boot', 'Redis', 'Docker', 'PostgreSQL'],

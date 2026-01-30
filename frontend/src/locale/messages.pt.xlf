@@ -126,9 +126,105 @@
         <source>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</source>
         <target>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</target>
       </trans-unit>
-      <trans-unit id="projectGeorouteDesc" datatype="html">
-        <source>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</source>
-        <target>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</target>
+      <trans-unit id="projectTechnologies" datatype="html">
+        <source>Technologies</source>
+        <target>Tecnologias</target>
+      </trans-unit>
+      <trans-unit id="projectAbout" datatype="html">
+        <source>About</source>
+        <target>Sobre</target>
+      </trans-unit>
+      <trans-unit id="projectObjectives" datatype="html">
+        <source>Objectives</source>
+        <target>Objetivos</target>
+      </trans-unit>
+      <trans-unit id="projectKeyGains" datatype="html">
+        <source>Key Gains</source>
+        <target>Principais Ganhos</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteDetailed" datatype="html">
+        <source>The Sipel Logistics Helper (codenamed GeoRoute) is a corporate Full Stack solution designed to optimize the logistical operations of Sipel Construções LTDA. It centralizes critical client and infrastructure data, integrating it with geolocation services to facilitate route planning and field service.</source>
+        <target>O Sipel Logistics Helper (codinome GeoRoute) é uma solução corporativa Full Stack projetada para otimizar as operações logísticas da Sipel Construções LTDA. Centraliza dados críticos de clientes e infraestrutura, integrando-os com serviços de geolocalização para facilitar o planejamento de rotas e atendimento em campo.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj1" datatype="html">
+        <source>Centralize querying of Installations, Contract Accounts, and Network Assets.</source>
+        <target>Centralizar a consulta de Instalações, Contas Contrato e Ativos de Rede.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj2" datatype="html">
+        <source>Offer unified and fast searches with automatic data type detection.</source>
+        <target>Oferecer buscas unificadas e rápidas com detecção automática do tipo de dado.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj3" datatype="html">
+        <source>Integrate directly with Google Maps for navigation to service points.</source>
+        <target>Integrar diretamente com Google Maps para navegação até os pontos de serviço.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj4" datatype="html">
+        <source>Process large volumes of data asynchronously via CSV.</source>
+        <target>Processar grandes volumes de dados de forma assíncrona via CSV.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain1" datatype="html">
+        <source>Receiving over 200 requests per day.</source>
+        <target>Atualmente recebendo mais de 200 requisições por dia.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain2" datatype="html">
+        <source>Guaranteeing the localization of over 6,000 customers per month.</source>
+        <target>Garantindo a localização de mais de 6.000 clientes por mês.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain3" datatype="html">
+        <source>Optimizing logistics by 93%.</source>
+        <target>Otimizando a logística em 93%.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain4" datatype="html">
+        <source>Replaced a complex mobile spreadsheet workflow with an intuitive interface for users with limited IT knowledge.</source>
+        <target>Substituiu um fluxo complexo de planilhas via celular por uma interface intuitiva para usuários com conhecimento básico em informática.</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolioDetailed" datatype="html">
+        <source>My personal professional portfolio developed to showcase my skills, experience, and software development projects. It serves as a central hub for my professional identity, demonstrating my proficiency in the Angular and Spring Boot ecosystem.</source>
+        <target>Meu portfólio profissional pessoal desenvolvido para mostrar minhas habilidades, experiência e projetos de desenvolvimento de software. Serve como um hub central para minha identidade profissional, demonstrando minha proficiência no ecossistema Angular e Spring Boot.</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj1" datatype="html">
+        <source>Present my work in a clean, modern, and accessible way.</source>
+        <target>Apresentar meu trabalho de forma limpa, moderna e acessível.</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj2" datatype="html">
+        <source>Showcase my projects and technical skills.</source>
+        <target>Mostrar meus projetos e habilidades técnicas.</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj3" datatype="html">
+        <source>Provide a contact channel for professional opportunities.</source>
+        <target>Fornecer um canal de contato para oportunidades profissionais.</target>
+      </trans-unit>
+      <trans-unit id="projectLangchainDetailed" datatype="html">
+        <source>A backend project exploring Retrieval-Augmented Generation (RAG) and Generative AI within the Java ecosystem. It integrates with Large Language Models (LLMs) to process natural language and provide intelligent responses based on context.</source>
+        <target>Um projeto backend explorando Geração Aumentada por Recuperação (RAG) e IA Generativa no ecossistema Java. Integra-se com Grandes Modelos de Linguagem (LLMs) para processar linguagem natural e fornecer respostas inteligentes baseadas no contexto.</target>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj1" datatype="html">
+        <source>Explore and master the integration of Java with modern AI tools.</source>
+        <target>Explorar e dominar a integração de Java com ferramentas modernas de IA.</target>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj2" datatype="html">
+        <source>Implement RAG patterns for enhanced context awareness.</source>
+        <target>Implementar padrões RAG para maior consciência de contexto.</target>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj3" datatype="html">
+        <source>Test integration with Gemini and other LLMs.</source>
+        <target>Testar integração com Gemini e outros LLMs.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDetailed" datatype="html">
+        <source>A backend application built as a technical challenge for an Angular developer position. It implements a robust set of RESTful APIs, focusing on best practices, data validation, and efficient database interactions.</source>
+        <target>Uma aplicação backend construída como desafio técnico para uma vaga de desenvolvedor Angular. Implementa um conjunto robusto de APIs RESTful, focando em boas práticas, validação de dados e interações eficientes com o banco de dados.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj1" datatype="html">
+        <source>Demonstrate solid knowledge of REST principles.</source>
+        <target>Demonstrar conhecimento sólido dos princípios REST.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj2" datatype="html">
+        <source>Implement secure and efficient endpoints using Spring Boot.</source>
+        <target>Implementar endpoints seguros e eficientes usando Spring Boot.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj3" datatype="html">
+        <source>Showcase database integration and Docker containerization.</source>
+        <target>Mostrar integração com banco de dados e containerização Docker.</target>
       </trans-unit>
     </body>
   </file>
