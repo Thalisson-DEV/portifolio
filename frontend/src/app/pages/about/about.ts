@@ -8,12 +8,12 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="pt-24 pb-40 px-4 max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
+
         <div class="space-y-8">
           <div>
             <h2 class="text-3xl font-bold text-white mb-4"><span class="text-neon-green">01.</span> <span i18n="@@aboutTitle">About-me</span></h2>
             <p class="text-gray-400 leading-relaxed" i18n="@@aboutBio">
-              Back-End Developer with a strong foundation in <strong class="text-white">Java and the Spring ecosystem</strong>. 
+              Back-End Developer with a strong foundation in <strong class="text-white">Java and the Spring ecosystem</strong>.
               Coming from a background in Data and Occupational Safety, which gave me a unique analytical perspective.
               Currently, I transform complex business rules into clean, testable, and scalable code.
               Passionate about optimizing SQL queries and creating robust RESTful APIs.
@@ -23,9 +23,9 @@ import { CommonModule } from '@angular/common';
           <div>
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-bold text-white" i18n="@@aboutTechStack">Tech Stack</h3>
-              
-              <button 
-                (click)="toggleView()" 
+
+              <button
+                (click)="toggleView()"
                 class="text-[10px] uppercase tracking-wider text-gray-600 hover:text-neon-green transition-colors cursor-pointer select-none flex items-center gap-1 focus:outline-none"
                 [attr.aria-label]="showIcons ? 'Switch to text view' : 'Switch to icon view'"
                 [title]="showIcons ? 'View Names' : 'View Icons'">
@@ -44,11 +44,11 @@ import { CommonModule } from '@angular/common';
               <div *ngIf="showIcons" class="flex flex-wrap gap-6 animate-fade-in items-center">
                 <ng-container *ngFor="let skill of skills">
                   <div class="group relative flex flex-col items-center" tabindex="0" [attr.aria-label]="skill">
-                    <i *ngIf="getIconClass(skill)" 
+                    <i *ngIf="getIconClass(skill)"
                        [class]="getIconClass(skill) + ' text-4xl text-gray-500 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'"
                        aria-hidden="true">
                     </i>
-                    
+
                     <span *ngIf="!getIconClass(skill)" class="px-2 py-1 border border-gray-700 rounded text-xs text-gray-500 font-mono hover:text-white hover:border-white transition">
                       {{ skill }}
                     </span>
@@ -71,15 +71,15 @@ import { CommonModule } from '@angular/common';
             <div class="w-3 h-3 rounded-full bg-green-500"></div>
             <span class="ml-2 text-xs text-gray-400">Thalisson.java</span>
           </div>
-          
+
           <div class="p-6 pb-12 overflow-x-auto">
             <pre><code><span class="text-code-keyword">public class</span> <span class="text-yellow-400">Thalisson</span> <span class="text-code-keyword">extends</span> <span class="text-code-class">BackendDev</span> &#123;
-  
+
   <span class="text-code-keyword">private final</span> String focus = <span class="text-code-string">"Java & Spring"</span>;
   <span class="text-code-keyword">private</span> String[] hardSkills = &#123;
     <span class="text-code-string">"Java"</span>, <span class="text-code-string">"Spring Boot"</span>, <span class="text-code-string">"Docker"</span>,
-    <span class="text-code-string">"PostgreSQL"</span>, <span class="text-code-string">"LangChain4j"</span>, <span class="text-code-string">"Git & GitHub"</span>,
-    <span class="text-code-string">"Redis"</span>, <span class="text-code-string">"Angular"</span>
+    <span class="text-code-string">"PostgreSQL"</span>, <span class="text-code-string">"LangChain4j"</span>, <span class="text-code-string">"Redis"</span>,
+    <span class="text-code-string">"Prometheus"</span>, <span class="text-code-string">"Grafana"</span>, <span class="text-code-string">"Angular"</span>
   &#125;;
 
   <span class="text-code-keyword">public</span> <span class="text-code-class">void</span> <span class="text-blue-400">code</span>() &#123;
@@ -113,7 +113,7 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class AboutComponent {
-  
+
   showIcons = true; // Começa como ícones
 
   toggleView() {
@@ -123,7 +123,7 @@ export class AboutComponent {
   skills = [
     'Java', 'Spring Boot', 'Spring Security', 'JPA/Hibernate',
     'Docker', 'PostgreSQL', 'Redis', 'Git Flow',
-    'Angular', 'TypeScript', 'Power Apps'
+    'Angular', 'TypeScript', 'Prometheus', 'Grafana'
   ];
 
   // Mapeamento específico para a página About
@@ -138,7 +138,8 @@ export class AboutComponent {
     'Git Flow': 'devicon-git-plain',
     'Angular': 'devicon-angularjs-plain',
     'TypeScript': 'devicon-typescript-plain',
-    'Power Apps': 'devicon-microsoft-plain'
+    'Prometheus': 'devicon-prometheus-original',
+    'Grafana': 'devicon-grafana-plain'
   };
 
   getIconClass(skillName: string): string {
