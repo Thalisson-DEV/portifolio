@@ -1,198 +1,143 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Project {
-  title: string;
-  description: string;
-  detailedDescription?: string;
-  objectives?: string[];
-  gains?: string[];
-  tech: string[];
-  github: string;
-  linkedin?: string;
-  showIcons: boolean;
-}
+import { ProjectModalComponent, Project } from './project-modal';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectModalComponent],
   template: `
-    <div class="pt-24 pb-40 px-4 max-w-7xl mx-auto">
+    <div class="pt-32 pb-40 px-4 max-w-7xl mx-auto animate-fade-in">
 
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold text-white">
-          <span class="text-neon-green">02.</span> <span i18n="@@projectsTitle">Projects</span>
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let project of projects" class="group bg-terminal-gray border border-gray-700 hover:border-neon-green transition duration-300 rounded-lg p-6 flex flex-col h-full relative overflow-hidden">
-
-          <div class="flex justify-between items-start mb-4">
-            <i class="devicon-folder-open-plain text-4xl text-neon-green" aria-hidden="true"></i>
-
-            <div class="flex items-center gap-4">
-              <button
-                (click)="toggleProjectView(project); $event.stopPropagation()"
-                class="text-gray-400 hover:text-white transition transform hover:scale-110 focus:outline-none"
-                [attr.aria-label]="project.showIcons ? 'Switch to text view' : 'Switch to icon view'"
-                [title]="project.showIcons ? 'Ver como texto' : 'Ver como ícones'">
-                <i [class]="project.showIcons ? 'devicon-bash-plain text-xl' : 'devicon-devicon-plain text-xl'" aria-hidden="true"></i>
-              </button>
-
-              <a *ngIf="project.github" [href]="project.github" target="_blank" (click)="$event.stopPropagation()" [attr.aria-label]="'View ' + project.title + ' source code on GitHub'" class="text-gray-400 hover:text-white transition transform hover:scale-110">
-                <i class="devicon-github-original text-xl" aria-hidden="true"></i>
-              </a>
-
-              <a *ngIf="project.linkedin" [href]="project.linkedin" target="_blank" (click)="$event.stopPropagation()" [attr.aria-label]="'View ' + project.title + ' post on LinkedIn'" class="text-gray-400 hover:text-white transition transform hover:scale-110">
-                <i class="devicon-linkedin-plain text-xl" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon-green transition cursor-pointer" (click)="openModal(project)">
-            {{ project.title }}
-          </h3>
-
-          <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed cursor-pointer hover:text-gray-300 transition" (click)="openModal(project)">
-            {{ project.description }}
-          </p>
-
-          <!-- Action and Tech area -->
-          <div class="mt-auto pt-6 flex flex-col gap-6">
-
-            <button (click)="openModal(project)" class="px-4 py-2 border border-neon-green text-neon-green font-mono text-xs hover:bg-neon-green hover:text-white transition rounded self-start focus:outline-none uppercase tracking-wider">
-              view_details()
-            </button>
-
-            <div class="flex items-center min-h-[40px]">
-              <div *ngIf="!project.showIcons" class="flex flex-wrap gap-2 animate-fade-in">
-                <span *ngFor="let tech of project.tech" class="text-[10px] font-mono text-neon-green/80 bg-neon-green/10 px-2 py-1 rounded border border-neon-green/10">
-                  {{ tech }}
-                </span>
-              </div>
-
-              <div *ngIf="project.showIcons" class="flex flex-wrap gap-3 items-center animate-fade-in">
-                <ng-container *ngFor="let tech of project.tech">
-                  <div class="group/tech relative flex flex-col items-center" tabindex="0" [attr.aria-label]="tech">
-                    <i *ngIf="getIconClass(tech)"
-                       [class]="getIconClass(tech) + ' text-xl text-gray-400 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'"
-                       aria-hidden="true">
-                    </i>
-
-                    <span *ngIf="getIconClass(tech)" class="absolute -bottom-8 opacity-0 group-hover/tech:opacity-100 transition-opacity text-[10px] text-white bg-gray-900 px-2 py-1 rounded border border-gray-700 whitespace-nowrap z-10 pointer-events-none">
-                      {{ tech }}
-                    </span>
-
-                    <span *ngIf="!getIconClass(tech)" class="text-[10px] border border-gray-700 px-1 rounded text-gray-500" [title]="tech">
-                      {{ tech }}
-                    </span>
-                  </div>
-                </ng-container>
-              </div>
-            </div>
-
-          </div>
-
+      <!-- Section Header -->
+      <div class="space-y-6 mb-16">
+        <div class="flex items-center gap-4">
+          <h2 class="text-3xl font-bold text-white tracking-tight">
+            <span class="text-[#22c55e] font-mono text-xl mr-2">02.</span>
+            <span i18n="@@projectsTitle">deployment_logs.sh</span>
+          </h2>
+          <div class="h-[1px] flex-grow bg-[#22c55e]/10 hidden md:block"></div>
+        </div>
+        <div class="flex items-center gap-2 font-mono text-sm">
+          <span class="text-[#22c55e]">$</span>
+          <span class="text-gray-500">ls ~/projects --detailed</span>
         </div>
       </div>
 
-      <!-- Project Detail Modal -->
-      <div *ngIf="selectedProject" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-fade-in" (click)="closeModal()">
-        <div class="bg-terminal-gray border border-gray-700 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl flex flex-col" (click)="$event.stopPropagation()">
-
-          <!-- Modal Header -->
-          <div class="p-6 border-b border-gray-700 flex justify-between items-start sticky top-0 bg-terminal-gray z-10">
-            <div>
-              <h3 class="text-2xl font-bold text-white mb-2">{{ selectedProject.title }}</h3>
-              <div class="flex gap-4">
-                 <a *ngIf="selectedProject.github" [href]="selectedProject.github" target="_blank" class="text-gray-400 hover:text-neon-green flex items-center gap-2 text-sm transition">
-                  <i class="devicon-github-original"></i> Source Code
-                </a>
-                <a *ngIf="selectedProject.linkedin" [href]="selectedProject.linkedin" target="_blank" class="text-gray-400 hover:text-neon-green flex items-center gap-2 text-sm transition">
-                  <i class="devicon-linkedin-plain"></i> LinkedIn Post
-                </a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for (project of projects; track project.title) {
+          <div class="group flex flex-col h-full bg-[#0a1a0d] border border-[#22c55e]/10 rounded-lg overflow-hidden hover:border-[#22c55e]/30 transition-all duration-300">
+            
+            <!-- Terminal Header -->
+            <div class="bg-[#050f07] px-4 py-2 flex items-center justify-between border-b border-[#22c55e]/10">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/50 group-hover:bg-[#ff5f56] transition-colors"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/50 group-hover:bg-[#ffbd2e] transition-colors"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]/50 group-hover:bg-[#27c93f] transition-colors"></div>
               </div>
-            </div>
-            <button (click)="closeModal()" class="text-gray-400 hover:text-white p-2 rounded-full hover:bg-gray-800 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          <!-- Modal Body -->
-          <div class="p-6 space-y-6 overflow-y-auto">
-
-            <!-- Technologies -->
-            <div>
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-3 font-semibold" i18n="@@projectTechnologies">Technologies</h4>
-              <div class="flex flex-wrap gap-2">
-                <span *ngFor="let tech of selectedProject.tech" class="text-xs font-mono text-neon-green/90 bg-neon-green/10 px-2 py-1 rounded border border-neon-green/20">
-                  {{ tech }}
-                </span>
+              <span class="text-[10px] text-gray-600 font-mono italic">~/projects/{{ project.title.toLowerCase().replace(' ', '-') }}</span>
+              <div class="flex items-center gap-2">
+                <button
+                  (click)="toggleProjectView(project); $event.stopPropagation()"
+                  class="text-gray-600 hover:text-[#22c55e] transition-colors focus:outline-none bg-transparent border-none cursor-pointer"
+                  [attr.aria-label]="project.showIcons ? 'Switch to text view' : 'Switch to icon view'"
+                  [title]="project.showIcons ? 'Ver como texto' : 'Ver como ícones'">
+                  <i [class]="project.showIcons ? 'devicon-bash-plain' : 'devicon-devicon-plain'" class="text-xs"></i>
+                </button>
+                @if (project.github) {
+                  <a [href]="project.github" target="_blank" (click)="$event.stopPropagation()" class="text-gray-600 hover:text-[#22c55e] transition-colors">
+                    <i class="devicon-github-original text-xs"></i>
+                  </a>
+                }
+                @if (project.linkedin) {
+                  <a [href]="project.linkedin" target="_blank" (click)="$event.stopPropagation()" class="text-gray-600 hover:text-[#22c55e] transition-colors">
+                    <i class="devicon-linkedin-plain text-xs"></i>
+                  </a>
+                }
               </div>
             </div>
 
-            <!-- Description -->
-            <div *ngIf="selectedProject.detailedDescription">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectAbout">About</h4>
-              <p class="text-gray-300 leading-relaxed">{{ selectedProject.detailedDescription }}</p>
-            </div>
+            <!-- Card Body -->
+            <div class="p-6 flex flex-col flex-grow space-y-4">
+              <div class="flex justify-between items-start">
+                <i class="devicon-folder-open-plain text-3xl text-[#22c55e]/60" aria-hidden="true"></i>
+              </div>
 
-            <!-- Objectives -->
-            <div *ngIf="selectedProject.objectives && selectedProject.objectives.length > 0">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectObjectives">Objectives</h4>
-              <ul class="list-disc list-inside space-y-1 text-gray-300">
-                <li *ngFor="let obj of selectedProject.objectives">{{ obj }}</li>
-              </ul>
-            </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-[#22c55e] transition-colors cursor-pointer" (click)="selectedProject = project">
+                  {{ project.title }}
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-3">
+                  {{ project.description }}
+                </p>
+              </div>
 
-            <!-- Gains -->
-            <div *ngIf="selectedProject.gains && selectedProject.gains.length > 0">
-              <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-2 font-semibold" i18n="@@projectKeyGains">Key Gains</h4>
-              <ul class="list-none space-y-2">
-                <li *ngFor="let gain of selectedProject.gains" class="flex items-start gap-2 text-gray-300">
-                  <span class="text-neon-green mt-1">✓</span>
-                  <span>{{ gain }}</span>
-                </li>
-              </ul>
-            </div>
+              <!-- Tech Stack & Action -->
+              <div class="mt-auto pt-4 space-y-6">
+                <div class="min-h-[32px]">
+                  @if (!project.showIcons) {
+                    <div class="flex flex-wrap gap-2 animate-fade-in">
+                      @for (tech of project.tech; track tech) {
+                        <span class="tech-tag">{{ tech }}</span>
+                      }
+                    </div>
+                  } @else {
+                    <div class="flex flex-wrap gap-3 items-center animate-fade-in">
+                      @for (tech of project.tech; track tech) {
+                        <div class="group/tech relative flex items-center" tabindex="0" [attr.aria-label]="tech">
+                          <i [class]="getIconClass(tech) + ' text-lg text-gray-500 hover:text-[#22c55e] transition-colors cursor-help'"></i>
+                          <span class="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/tech:opacity-100 transition-opacity text-[9px] font-mono text-[#22c55e] bg-[#050f07] border border-[#22c55e]/20 px-1.5 py-0.5 rounded whitespace-nowrap z-10 pointer-events-none">
+                            {{ tech }}
+                          </span>
+                        </div>
+                      }
+                    </div>
+                  }
+                </div>
 
+                <button (click)="selectedProject = project" class="btn-details">
+                  view_details()
+                </button>
+              </div>
+            </div>
           </div>
-
-        </div>
+        }
       </div>
+
+      <!-- Modular Project Detail Modal -->
+      <app-project-modal 
+        [project]="selectedProject" 
+        (closed)="selectedProject = null">
+      </app-project-modal>
 
     </div>
   `,
   styles: [`
+    .tech-tag {
+      @apply px-2 py-0.5 border border-[#22c55e]/20 bg-[#22c55e]/5 text-[#22c55e]/80 text-[10px] font-mono rounded transition-all duration-200 cursor-default;
+    }
+    .tech-tag:hover {
+      @apply bg-[#22c55e]/10 border-[#22c55e]/40 text-[#22c55e];
+    }
+
+    .btn-details {
+      @apply px-4 py-2 border border-[#22c55e]/30 text-[#22c55e] font-mono text-xs hover:bg-[#22c55e] hover:text-[#050f07] transition-all duration-200 rounded uppercase tracking-wider bg-transparent cursor-pointer;
+    }
+
     .animate-fade-in {
-      animation: fadeIn 0.3s ease-in-out;
+      animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
     }
   `]
 })
 export class ProjectsComponent {
-
   selectedProject: Project | null = null;
 
   toggleProjectView(project: Project) {
     project.showIcons = !project.showIcons;
-  }
-
-  openModal(project: Project) {
-    this.selectedProject = project;
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  }
-
-  closeModal() {
-    this.selectedProject = null;
-    document.body.style.overflow = ''; // Restore scrolling
   }
 
   techIconMap: { [key: string]: string } = {
