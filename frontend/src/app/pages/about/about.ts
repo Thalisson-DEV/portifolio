@@ -190,40 +190,40 @@ export class AboutComponent {
   }
 
   skills = [
-    'Java 21', 'Spring Boot 3', 'Node.js', 'Fastify 5',
-    'Next.js 15', 'Virtual Threads', 'Supabase', 'PostgreSQL 17',
-    'Redis', 'Claude AI', 'Angular 21', 'PWA', 'Astro 5'
+    'Java', 'Spring Boot', 'Node.js', 'Fastify',
+    'Next.js', 'Virtual Threads', 'Supabase', 'PostgreSQL',
+    'Redis', 'Claude AI', 'Angular', 'PWA', 'Astro'
   ];
 
   skillGroups = [
     {
       name: $localize`:@@aboutBackend:Backend & Core`,
-      skills: ['Java 21', 'Spring Boot 3', 'Virtual Threads', 'Node.js', 'Fastify 5']
+      skills: ['Java', 'Spring Boot', 'Virtual Threads', 'Node.js', 'Fastify']
     },
     {
       name: $localize`:@@aboutFrontend:Frontend & UX`,
-      skills: ['Angular 21', 'Next.js 15', 'Astro 5', 'PWA']
+      skills: ['Angular', 'Next.js', 'Astro', 'PWA']
     },
     {
       name: $localize`:@@aboutDatabase:Infrastructure & Data`,
-      skills: ['PostgreSQL 17', 'Redis', 'Supabase', 'Claude AI']
+      skills: ['PostgreSQL', 'Redis', 'Supabase', 'Claude AI']
     }
   ];
 
   techIconMap: { [key: string]: string } = {
-    'Java 21': 'devicon-java-plain',
-    'Spring Boot 3': 'devicon-spring-original',
+    'Java': 'devicon-java-plain',
+    'Spring Boot': 'devicon-spring-original',
     'Node.js': 'devicon-nodejs-plain',
-    'Fastify 5': 'devicon-nodejs-plain',
-    'Next.js 15': 'devicon-nextjs-plain',
+    'Fastify': 'devicon-fastify-plain',
+    'Next.js': 'devicon-nextjs-plain',
     'Virtual Threads': 'devicon-java-plain',
     'Supabase': 'devicon-supabase-plain',
-    'PostgreSQL 17': 'devicon-postgresql-plain',
+    'PostgreSQL': 'devicon-postgresql-plain',
     'Redis': 'devicon-redis-plain',
     'Claude AI': '',
-    'Angular 21': 'devicon-angularjs-plain',
+    'Angular': 'devicon-angularjs-plain',
     'PWA': 'devicon-javascript-plain',
-    'Astro 5': 'devicon-astro-plain'
+    'Astro': 'devicon-astro-plain'
   };
 
   getIconClass(skillName: string): string {
