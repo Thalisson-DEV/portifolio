@@ -19,22 +19,22 @@ interface Project {
   imports: [CommonModule],
   template: `
     <div class="pt-24 pb-40 px-4 max-w-7xl mx-auto">
-      
+
       <div class="mb-10">
         <h2 class="text-3xl font-bold text-white">
           <span class="text-neon-green">02.</span> <span i18n="@@projectsTitle">Projects</span>
         </h2>
       </div>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let project of projects" class="group bg-terminal-gray border border-gray-700 hover:border-neon-green transition duration-300 rounded-lg p-6 flex flex-col h-full relative overflow-hidden">
-          
+
           <div class="flex justify-between items-start mb-4">
             <i class="devicon-folder-open-plain text-4xl text-neon-green" aria-hidden="true"></i>
-            
+
             <div class="flex items-center gap-4">
-              <button 
-                (click)="toggleProjectView(project); $event.stopPropagation()" 
+              <button
+                (click)="toggleProjectView(project); $event.stopPropagation()"
                 class="text-gray-400 hover:text-white transition transform hover:scale-110 focus:outline-none"
                 [attr.aria-label]="project.showIcons ? 'Switch to text view' : 'Switch to icon view'"
                 [title]="project.showIcons ? 'Ver como texto' : 'Ver como ícones'">
@@ -44,7 +44,7 @@ interface Project {
               <a *ngIf="project.github" [href]="project.github" target="_blank" (click)="$event.stopPropagation()" [attr.aria-label]="'View ' + project.title + ' source code on GitHub'" class="text-gray-400 hover:text-white transition transform hover:scale-110">
                 <i class="devicon-github-original text-xl" aria-hidden="true"></i>
               </a>
-              
+
               <a *ngIf="project.linkedin" [href]="project.linkedin" target="_blank" (click)="$event.stopPropagation()" [attr.aria-label]="'View ' + project.title + ' post on LinkedIn'" class="text-gray-400 hover:text-white transition transform hover:scale-110">
                 <i class="devicon-linkedin-plain text-xl" aria-hidden="true"></i>
               </a>
@@ -54,14 +54,14 @@ interface Project {
           <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon-green transition cursor-pointer" (click)="openModal(project)">
             {{ project.title }}
           </h3>
-          
+
           <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed cursor-pointer hover:text-gray-300 transition" (click)="openModal(project)">
             {{ project.description }}
           </p>
 
           <!-- Action and Tech area -->
           <div class="mt-auto pt-6 flex flex-col gap-6">
-            
+
             <button (click)="openModal(project)" class="px-4 py-2 border border-neon-green text-neon-green font-mono text-xs hover:bg-neon-green hover:text-white transition rounded self-start focus:outline-none uppercase tracking-wider">
               view_details()
             </button>
@@ -76,11 +76,11 @@ interface Project {
               <div *ngIf="project.showIcons" class="flex flex-wrap gap-3 items-center animate-fade-in">
                 <ng-container *ngFor="let tech of project.tech">
                   <div class="group/tech relative flex flex-col items-center" tabindex="0" [attr.aria-label]="tech">
-                    <i *ngIf="getIconClass(tech)" 
-                       [class]="getIconClass(tech) + ' text-xl text-gray-400 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'" 
+                    <i *ngIf="getIconClass(tech)"
+                       [class]="getIconClass(tech) + ' text-xl text-gray-400 hover:text-neon-green transition-all duration-300 transform hover:scale-110 cursor-help'"
                        aria-hidden="true">
                     </i>
-                    
+
                     <span *ngIf="getIconClass(tech)" class="absolute -bottom-8 opacity-0 group-hover/tech:opacity-100 transition-opacity text-[10px] text-white bg-gray-900 px-2 py-1 rounded border border-gray-700 whitespace-nowrap z-10 pointer-events-none">
                       {{ tech }}
                     </span>
@@ -101,7 +101,7 @@ interface Project {
       <!-- Project Detail Modal -->
       <div *ngIf="selectedProject" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-fade-in" (click)="closeModal()">
         <div class="bg-terminal-gray border border-gray-700 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl flex flex-col" (click)="$event.stopPropagation()">
-          
+
           <!-- Modal Header -->
           <div class="p-6 border-b border-gray-700 flex justify-between items-start sticky top-0 bg-terminal-gray z-10">
             <div>
@@ -124,7 +124,7 @@ interface Project {
 
           <!-- Modal Body -->
           <div class="p-6 space-y-6 overflow-y-auto">
-            
+
             <!-- Technologies -->
             <div>
               <h4 class="text-sm uppercase tracking-wider text-gray-500 mb-3 font-semibold" i18n="@@projectTechnologies">Technologies</h4>
@@ -161,7 +161,7 @@ interface Project {
             </div>
 
           </div>
-          
+
         </div>
       </div>
 
@@ -213,7 +213,18 @@ export class ProjectsComponent {
     'Cache': 'devicon-redis-plain',
     'Power Apps': 'devicon-microsoft-plain',
     'Prometheus': 'devicon-prometheus-original',
-    'Grafana': 'devicon-grafana-plain'
+    'Grafana': 'devicon-grafana-plain',
+    'Flyway': 'devicon-flyway-plain',
+    'Resilience4j': 'devicon-spring-plain',
+    'PWA': 'devicon-javascript-plain',
+    'Dexie.js': 'devicon-javascript-plain',
+    'Next.js': 'devicon-nextjs-plain',
+    'Fastify': 'devicon-nodejs-plain',
+    'Supabase': 'devicon-supabase-plain',
+    'Claude AI': 'devicon-illustrator-plain',
+    'Astro': 'devicon-astro-plain',
+    'Drizzle': 'devicon-javascript-plain',
+    'Node.js': 'devicon-nodejs-plain'
   };
 
   getIconClass(techName: string): string {
@@ -221,6 +232,44 @@ export class ProjectsComponent {
   }
 
   projects: Project[] = [
+    {
+      title: 'Kore — AI ATS Optimizer',
+      description: $localize`:@@projectKoreDesc:Fullstack SaaS for resume optimization with AI and deterministic scoring.`,
+      detailedDescription: $localize`:@@projectKoreDetailed:Kore is a high-performance fullstack SaaS designed to optimize resumes against ATS systems. The core technical differentiator is the 100% deterministic and auditable ATS score via pure mathematics, while Claude 3.5 Sonnet handles directed rewriting. It features a Next.js 15 dashboard, a Fastify 5 backend, and a 6-stage AI pipeline.`,
+      objectives: [
+        $localize`:@@projectKoreObj1:Implement deterministic scoring (cosine similarity + keyword density) isolated from the LLM.`,
+        $localize`:@@projectKoreObj2:Develop end-to-end streaming via SSE for progressive optimization display.`,
+        $localize`:@@projectKoreObj3:Ensure maximum security with AES-256-GCM encryption for API keys (BYOK model).`,
+        $localize`:@@projectKoreObj4:Optimize performance and costs with aggressive embedding caching via SHA-256.`
+      ],
+      gains: [
+        $localize`:@@projectKoreGain1:Immediate and transparent feedback on resume compatibility.`,
+        $localize`:@@projectKoreGain2:Highly scalable and secure architecture for sensitive data processing.`,
+        $localize`:@@projectKoreGain3:Modern and responsive interface focused on developer experience.`
+      ],
+      tech: ['Next.js', 'Fastify', 'Astro', 'Supabase', 'AI', 'Drizzle', 'Redis', 'Tailwind CSS'],
+      github: '',
+      showIcons: true
+    },
+    {
+      title: 'C.E.S (Controle Estratégico)',
+      description: $localize`:@@projectCesDesc:ERP for strategic control of logistics, commercial and HR operations.`,
+      detailedDescription: $localize`:@@projectCesDetailed:C.E.S is a mission-critical ERP designed to orchestrate complex operations with high performance and security. It features a Java 21 Modulith backend with Virtual Threads, an Angular backoffice, and an offline-first PWA for field teams. Implements Domain-Driven Design (DDD), AES-256 GCM encryption, and Outbox Pattern for reliable offline synchronization.`,
+      objectives: [
+        $localize`:@@projectCesObj1:Orchestrate logistics, commercial, and HR operations in a unified platform.`,
+        $localize`:@@projectCesObj2:Ensure 100% availability for field teams via Offline-First PWA.`,
+        $localize`:@@projectCesObj3:Implement rigorous security standards, including data encryption and immutable auditing.`,
+        $localize`:@@projectCesObj4:Process high I/O volumes using Java Virtual Threads.`
+      ],
+      gains: [
+        $localize`:@@projectCesGain1:Reduced operational latency with Modulith architecture and Virtual Threads.`,
+        $localize`:@@projectCesGain2:Elimination of data loss in field operations via robust offline synchronization.`,
+        $localize`:@@projectCesGain3:Increased security and compliance with AES-256 encryption and JSONB auditing.`
+      ],
+      tech: ['Java', 'Spring Boot', 'Angular', 'PWA', 'Dexie.js', 'PostgreSQL', 'Redis', 'Flyway', 'Resilience4j'],
+      github: '',
+      showIcons: true
+    },
     {
       title: 'GeoRoute',
       description: $localize`:@@projectGeorouteDesc:Corporate Full Stack solution for logistics optimization with real-time geolocation.`,

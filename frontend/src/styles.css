@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .section-content {
+    opacity: 0;
+  }
+
+  .section-content.visible {
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0 }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background: #22c55e;
+    vertical-align: middle;
+    animation: blink 0.9s step-end infinite;
+  }
+}
+
 body {
   @apply bg-terminal-black text-gray-300 font-sans;
   /* Evita rolagem lateral indesejada */

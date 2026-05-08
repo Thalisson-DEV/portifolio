@@ -21,7 +21,7 @@ interface RestException {
       <h2 class="text-3xl font-bold text-white mb-8 text-center"><span class="text-neon-green">03.</span> <span i18n="@@contactTitle">Get In Touch</span></h2>
 
       <p class="text-gray-400 text-center max-w-xl mx-auto mb-12" i18n="@@contactDesc">
-        Currently open to new opportunities as a Junior Developer.
+        Currently open to new opportunities as a Developer.
         My inbox is always open!
       </p>
 

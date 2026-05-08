@@ -19,16 +19,20 @@
         <target>_contato</target>
       </trans-unit>
       <trans-unit id="aboutTitle" datatype="html">
-        <source>About-me</source>
-        <target>Sobre mim</target>
+        <source>core_identity.sh</source>
+        <target>identidade_principal.sh</target>
       </trans-unit>
-      <trans-unit id="aboutBio" datatype="html">
-        <source> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </source>
-        <target> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </target>
+      <trans-unit id="aboutBio1" datatype="html">
+        <source> Full Stack Developer specializing in <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>end-to-end scalable architectures<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. I bridge the gap between robust, high-concurrency backends in Java/Spring and pixel-perfect, high-performance reactive frontends using Angular and Next.js. </source>
+        <target> Desenvolvedor Full Stack especializado em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>arquiteturas escaláveis de ponta a ponta<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Eu conecto o gap entre backends robustos de alta concorrência em Java/Spring e frontends reativos de alta performance em Angular e Next.js. </target>
+      </trans-unit>
+      <trans-unit id="aboutBio2" datatype="html">
+        <source> My mission is to transform complex business requirements into elegant technical solutions. From designing mission-critical ERPs to orchestrating AI-driven SaaS pipelines, I focus on mathematical precision, security, and exceptional user experience across the entire stack. </source>
+        <target> Minha missão é transformar requisitos de negócio complexos em soluções técnicas elegantes. Do design de ERPs de missão crítica à orquestração de pipelines SaaS baseados em IA, foco em precisão matemática, segurança e experiência de usuário excepcional em toda a stack. </target>
       </trans-unit>
       <trans-unit id="aboutTechStack" datatype="html">
-        <source>Tech Stack</source>
-        <target>Tecnologias</target>
+        <source>Technical Ecosystem</source>
+        <target>Ecossistema Técnico</target>
       </trans-unit>
       <trans-unit id="aboutViewNames" datatype="html">
         <source>Ver Nomes</source>
@@ -98,6 +102,14 @@
         <source>Java &amp; Spring Specialist</source>
         <target>Especialista Java &amp; Spring</target>
       </trans-unit>
+      <trans-unit id="homeRoleSaas" datatype="html">
+        <source>SaaS &amp; AI Architect</source>
+        <target>Arquiteto SaaS &amp; IA</target>
+      </trans-unit>
+      <trans-unit id="homeRoleErp" datatype="html">
+        <source>Building Strategic ERPs</source>
+        <target>Construindo ERPs Estratégicos</target>
+      </trans-unit>
       <trans-unit id="homeRoleDocker" datatype="html">
         <source>Docker &amp; Cloud Enthusiast</source>
         <target>Entusiasta Docker &amp; Cloud</target>
@@ -106,25 +118,29 @@
         <source>Solving complex problems</source>
         <target>Resolvendo problemas complexos</target>
       </trans-unit>
+      <trans-unit id="homeStatExp" datatype="html">
+        <source>years experience</source>
+        <target>anos de experiência</target>
+      </trans-unit>
+      <trans-unit id="homeStatProjects" datatype="html">
+        <source>projects completed</source>
+        <target>projetos finalizados</target>
+      </trans-unit>
+      <trans-unit id="homeStatSaas" datatype="html">
+        <source>SaaS in construction</source>
+        <target>SaaS em construção</target>
+      </trans-unit>
+      <trans-unit id="homeStatCoffee" datatype="html">
+        <source>cups of coffee</source>
+        <target>cafés consumidos</target>
+      </trans-unit>
       <trans-unit id="projectsTitle" datatype="html">
         <source>Projects</source>
         <target>Projetos</target>
       </trans-unit>
       <trans-unit id="projectPortfolioDesc" datatype="html">
-        <source>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</source>
-        <target>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</target>
-      </trans-unit>
-      <trans-unit id="projectBackpackDesc" datatype="html">
-        <source>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</source>
-        <target>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</target>
-      </trans-unit>
-      <trans-unit id="projectLangchainDesc" datatype="html">
-        <source>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</source>
-        <target>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</target>
-      </trans-unit>
-      <trans-unit id="projectAngularApiDesc" datatype="html">
-        <source>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</source>
-        <target>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</target>
+        <source>My personal portfolio developed with Angular and Spring, highlighting my skills and projects.</source>
+        <target>Meu portfólio pessoal desenvolvido com Angular e Spring, destacando minhas habilidades e projetos.</target>
       </trans-unit>
       <trans-unit id="projectTechnologies" datatype="html">
         <source>Technologies</source>
@@ -141,6 +157,82 @@
       <trans-unit id="projectKeyGains" datatype="html">
         <source>Key Gains</source>
         <target>Principais Ganhos</target>
+      </trans-unit>
+      <trans-unit id="projectKoreDesc" datatype="html">
+        <source>Fullstack SaaS for resume optimization with AI and deterministic scoring.</source>
+        <target>SaaS Fullstack para otimização de currículos com IA e scoring determinístico.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreDetailed" datatype="html">
+        <source>Kore is a high-performance fullstack SaaS designed to optimize resumes against ATS systems. The core technical differentiator is the 100% deterministic and auditable ATS score via pure mathematics, while Claude 3.5 Sonnet handles directed rewriting. It features a Next.js 15 dashboard, a Fastify 5 backend, and a 6-stage AI pipeline.</source>
+        <target>O Kore é um SaaS fullstack de alto desempenho projetado para otimizar currículos contra sistemas ATS. O diferencial técnico é o score ATS 100% determinístico e auditável via matemática pura, enquanto o Claude 3.5 Sonnet atua na reescrita dirigida. Possui dashboard em Next.js 15, backend em Fastify 5 e pipeline de IA processada em 6 etapas.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreObj1" datatype="html">
+        <source>Implement deterministic scoring (cosine similarity + keyword density) isolated from the LLM.</source>
+        <target>Implementar scoring determinístico (cosine similarity + keyword density) isolado do LLM.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreObj2" datatype="html">
+        <source>Develop end-to-end streaming via SSE for progressive optimization display.</source>
+        <target>Desenvolver streaming end-to-end via SSE para exibição progressiva da otimização.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreObj3" datatype="html">
+        <source>Ensure maximum security with AES-256-GCM encryption for API keys (BYOK model).</source>
+        <target>Garantir segurança máxima com criptografia AES-256-GCM para chaves de API (modelo BYOK).</target>
+      </trans-unit>
+      <trans-unit id="projectKoreObj4" datatype="html">
+        <source>Optimize performance and costs with aggressive embedding caching via SHA-256.</source>
+        <target>Otimizar performance e custos com cache agressivo de embeddings via SHA-256.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreGain1" datatype="html">
+        <source>Immediate and transparent feedback on resume compatibility.</source>
+        <target>Feedback imediato e transparente sobre a compatibilidade do currículo.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreGain2" datatype="html">
+        <source>Highly scalable and secure architecture for sensitive data processing.</source>
+        <target>Arquitetura altamente escalável e segura para processamento de dados sensíveis.</target>
+      </trans-unit>
+      <trans-unit id="projectKoreGain3" datatype="html">
+        <source>Modern and responsive interface focused on developer experience.</source>
+        <target>Interface moderna e responsiva focada na experiência do desenvolvedor.</target>
+      </trans-unit>
+      <trans-unit id="projectCesDesc" datatype="html">
+        <source>ERP for strategic control of logistics, commercial and HR operations.</source>
+        <target>ERP para controle estratégico de operações logísticas, comerciais e de RH.</target>
+      </trans-unit>
+      <trans-unit id="projectCesDetailed" datatype="html">
+        <source>C.E.S is a mission-critical ERP designed to orchestrate complex operations with high performance and security. It features a Java 21 Modulith backend with Virtual Threads, an Angular backoffice, and an offline-first PWA for field teams. Implements Domain-Driven Design (DDD), AES-256 GCM encryption, and Outbox Pattern for reliable offline synchronization.</source>
+        <target>O C.E.S é um ERP de missão crítica projetado para orquestrar operações complexas com alta performance e segurança. Possui um backend Java 21 Modulith com Virtual Threads, um backoffice em Angular e um PWA offline-first para equipes de campo. Implementa Domain-Driven Design (DDD), criptografia AES-256 GCM e Outbox Pattern para sincronização offline confiável.</target>
+      </trans-unit>
+      <trans-unit id="projectCesObj1" datatype="html">
+        <source>Orchestrate logistics, commercial, and HR operations in a unified platform.</source>
+        <target>Orquestrar operações logísticas, comerciais e de RH em uma plataforma unificada.</target>
+      </trans-unit>
+      <trans-unit id="projectCesObj2" datatype="html">
+        <source>Ensure 100% availability for field teams via Offline-First PWA.</source>
+        <target>Garantir 100% de disponibilidade para equipes de campo via PWA Offline-First.</target>
+      </trans-unit>
+      <trans-unit id="projectCesObj3" datatype="html">
+        <source>Implement rigorous security standards, including data encryption and immutable auditing.</source>
+        <target>Implementar padrões de segurança rigorosos, incluindo criptografia de dados e auditoria imutável.</target>
+      </trans-unit>
+      <trans-unit id="projectCesObj4" datatype="html">
+        <source>Process high I/O volumes using Java Virtual Threads.</source>
+        <target>Processar altos volumes de I/O utilizando Java Virtual Threads.</target>
+      </trans-unit>
+      <trans-unit id="projectCesGain1" datatype="html">
+        <source>Reduced operational latency with Modulith architecture and Virtual Threads.</source>
+        <target>Redução da latência operacional com arquitetura Modulith e Virtual Threads.</target>
+      </trans-unit>
+      <trans-unit id="projectCesGain2" datatype="html">
+        <source>Elimination of data loss in field operations via robust offline synchronization.</source>
+        <target>Eliminação de perda de dados em operações de campo via sincronização offline robusta.</target>
+      </trans-unit>
+      <trans-unit id="projectCesGain3" datatype="html">
+        <source>Increased security and compliance with AES-256 encryption and JSONB auditing.</source>
+        <target>Aumento da segurança e conformidade com criptografia AES-256 e auditoria em JSONB.</target>
+      </trans-unit>
+      <trans-unit id="projectGeorouteDesc" datatype="html">
+        <source>Corporate Full Stack solution for logistics optimization with real-time geolocation.</source>
+        <target>Solução corporativa Full Stack para otimização logística com geolocalização em tempo real.</target>
       </trans-unit>
       <trans-unit id="projectGeorouteDetailed" datatype="html">
         <source>The Sipel Logistics Helper (codenamed GeoRoute) is a corporate Full Stack solution designed to optimize the logistical operations of Sipel Construções LTDA. It centralizes critical client and infrastructure data, integrating it with geolocation services to facilitate route planning and field service.</source>
@@ -194,6 +286,10 @@
         <source>Provide a contact channel for professional opportunities.</source>
         <target>Fornecer um canal de contato para oportunidades profissionais.</target>
       </trans-unit>
+      <trans-unit id="projectLangchainDesc" datatype="html">
+        <source>Backend exploring RAG and Generative AI in the Java ecosystem.</source>
+        <target>Backend explorando RAG e IA Generativa no ecossistema Java.</target>
+      </trans-unit>
       <trans-unit id="projectLangchainDetailed" datatype="html">
         <source>A backend project exploring Retrieval-Augmented Generation (RAG) and Generative AI within the Java ecosystem. It integrates with Large Language Models (LLMs) to process natural language and provide intelligent responses based on context.</source>
         <target>Um projeto backend explorando Geração Aumentada por Recuperação (RAG) e IA Generativa no ecossistema Java. Integra-se com Grandes Modelos de Linguagem (LLMs) para processar linguagem natural e fornecer respostas inteligentes baseadas no contexto.</target>
@@ -209,6 +305,10 @@
       <trans-unit id="projectLangchainObj3" datatype="html">
         <source>Test integration with Gemini and other LLMs.</source>
         <target>Testar integração com Gemini e outros LLMs.</target>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDesc" datatype="html">
+        <source>Backend for Angular developer technical challenge. Implementation of RESTful APIs.</source>
+        <target>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful.</target>
       </trans-unit>
       <trans-unit id="projectAngularApiDetailed" datatype="html">
         <source>A backend application built as a technical challenge for an Angular developer position. It implements a robust set of RESTful APIs, focusing on best practices, data validation, and efficient database interactions.</source>

@@ -4,227 +4,246 @@
     <body>
       <trans-unit id="navHello" datatype="html">
         <source>_hello</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="navAbout" datatype="html">
         <source>_about-me</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="navProjects" datatype="html">
         <source>_projects</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">73</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="navContact" datatype="html">
         <source>_contact-me</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">74</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="aboutTitle" datatype="html">
-        <source>About-me</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
-          <context context-type="linenumber">14,15</context>
-        </context-group>
+        <source>core_identity.sh</source>
       </trans-unit>
-      <trans-unit id="aboutBio" datatype="html">
-        <source> Desenvolvedor Back-End com forte base em <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>Java e ecossistema Spring<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Vim da área de Dados e Segurança do Trabalho, o que me deu uma visão analítica única. Atualmente transformo regras de negócio complexas em código limpo, testável e escalável. Apaixonado por otimizar queries SQL e criar APIs RESTful robustas. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
-          <context context-type="linenumber">16,19</context>
-        </context-group>
+      <trans-unit id="aboutBio1" datatype="html">
+        <source> Full Stack Developer specializing in <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;text-white&quot;&gt;"/>end-to-end scalable architectures<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. I bridge the gap between robust, high-concurrency backends in Java/Spring and pixel-perfect, high-performance reactive frontends using Angular and Next.js. </source>
+      </trans-unit>
+      <trans-unit id="aboutBio2" datatype="html">
+        <source> My mission is to transform complex business requirements into elegant technical solutions. From designing mission-critical ERPs to orchestrating AI-driven SaaS pipelines, I focus on mathematical precision, security, and exceptional user experience across the entire stack. </source>
       </trans-unit>
       <trans-unit id="aboutTechStack" datatype="html">
-        <source>Tech Stack</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
-          <context context-type="linenumber">25,27</context>
-        </context-group>
+        <source>Technical Ecosystem</source>
       </trans-unit>
       <trans-unit id="aboutViewNames" datatype="html">
         <source>Ver Nomes</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
-          <context context-type="linenumber">33,34</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="aboutViewIcons" datatype="html">
         <source>Ver Ícones</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about/about.ts</context>
-          <context context-type="linenumber">34,35</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactTitle" datatype="html">
         <source>Get In Touch</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">21,23</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactDesc" datatype="html">
         <source> Atualmente estou aberto a novas oportunidades como Desenvolvedor. Minha caixa de entrada está sempre aberta! </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">24,26</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactInfoTitle" datatype="html">
         <source>&gt; contact_info</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">30,31</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactLabelName" datatype="html">
         <source>Name</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">45,46</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactPlaceholderName" datatype="html">
         <source>Name</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactLabelEmail" datatype="html">
         <source>Email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">52,53</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactPlaceholderEmail" datatype="html">
         <source>Email</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactLabelMessage" datatype="html">
         <source>Message</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">59,60</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactPlaceholderMessage" datatype="html">
         <source>Message</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactButtonSending" datatype="html">
         <source>Sending Packet...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">67,68</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="contactButtonSend" datatype="html">
         <source>Send Message</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.ts</context>
-          <context context-type="linenumber">68,70</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="homeGreeting" datatype="html">
         <source>System.out.println(&quot;Hello World! I am&quot;)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">19,21</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="homeDownloadCV" datatype="html">
         <source> Download CV </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">33,34</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="homeRoleBackend" datatype="html">
         <source>Back-End Developer</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">62</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="homeRoleJava" datatype="html">
         <source>Java &amp; Spring Specialist</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRoleSaas" datatype="html">
+        <source>SaaS &amp; AI Architect</source>
+      </trans-unit>
+      <trans-unit id="homeRoleErp" datatype="html">
+        <source>Building Strategic ERPs</source>
       </trans-unit>
       <trans-unit id="homeRoleDocker" datatype="html">
         <source>Docker &amp; Cloud Enthusiast</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="homeRoleSolving" datatype="html">
         <source>Solving complex problems</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
+      </trans-unit>
+      <trans-unit id="homeStatExp" datatype="html">
+        <source>years experience</source>
+      </trans-unit>
+      <trans-unit id="homeStatProjects" datatype="html">
+        <source>projects completed</source>
+      </trans-unit>
+      <trans-unit id="homeStatSaas" datatype="html">
+        <source>SaaS in construction</source>
+      </trans-unit>
+      <trans-unit id="homeStatCoffee" datatype="html">
+        <source>cups of coffee</source>
       </trans-unit>
       <trans-unit id="projectsTitle" datatype="html">
         <source>Projects</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">22,24</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="projectPortfolioDesc" datatype="html">
-        <source>Meu portfólio pessoal desenvolvido com Angular, Tailwind CSS, Java e Spring, destacando minhas habilidades e projetos em desenvolvimento de software.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">129</context>
-        </context-group>
+        <source>My personal portfolio developed with Angular and Spring, highlighting my skills and projects.</source>
       </trans-unit>
-      <trans-unit id="projectBackpackDesc" datatype="html">
-        <source>Plataforma Full Stack para ensino de inglês institucional. Integração completa com controle de usuários e regras de negócio educacionais.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">137</context>
-        </context-group>
+      <trans-unit id="projectTechnologies" datatype="html">
+        <source>Technologies</source>
       </trans-unit>
-      <trans-unit id="projectLangchainDesc" datatype="html">
-        <source>Backend explorando RAG e IA Generativa no ecossistema Java. Integração com LLMs para processamento de linguagem natural.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">145</context>
-        </context-group>
+      <trans-unit id="projectAbout" datatype="html">
+        <source>About</source>
       </trans-unit>
-      <trans-unit id="projectAngularApiDesc" datatype="html">
-        <source>Backend para desafio técnico de desenvolvedor Angular. Implementação de APIs RESTful com Java e Spring Boot.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">153</context>
-        </context-group>
+      <trans-unit id="projectObjectives" datatype="html">
+        <source>Objectives</source>
+      </trans-unit>
+      <trans-unit id="projectKeyGains" datatype="html">
+        <source>Key Gains</source>
+      </trans-unit>
+      <trans-unit id="projectKoreDesc" datatype="html">
+        <source>Fullstack SaaS for resume optimization with AI and deterministic scoring.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreDetailed" datatype="html">
+        <source>Kore is a high-performance fullstack SaaS designed to optimize resumes against ATS systems. The core technical differentiator is the 100% deterministic and auditable ATS score via pure mathematics, while Claude 3.5 Sonnet handles directed rewriting. It features a Next.js 15 dashboard, a Fastify 5 backend, and a 6-stage AI pipeline.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreObj1" datatype="html">
+        <source>Implement deterministic scoring (cosine similarity + keyword density) isolated from the LLM.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreObj2" datatype="html">
+        <source>Develop end-to-end streaming via SSE for progressive optimization display.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreObj3" datatype="html">
+        <source>Ensure maximum security with AES-256-GCM encryption for API keys (BYOK model).</source>
+      </trans-unit>
+      <trans-unit id="projectKoreObj4" datatype="html">
+        <source>Optimize performance and costs with aggressive embedding caching via SHA-256.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreGain1" datatype="html">
+        <source>Immediate and transparent feedback on resume compatibility.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreGain2" datatype="html">
+        <source>Highly scalable and secure architecture for sensitive data processing.</source>
+      </trans-unit>
+      <trans-unit id="projectKoreGain3" datatype="html">
+        <source>Modern and responsive interface focused on developer experience.</source>
+      </trans-unit>
+      <trans-unit id="projectCesDesc" datatype="html">
+        <source>ERP for strategic control of logistics, commercial and HR operations.</source>
+      </trans-unit>
+      <trans-unit id="projectCesDetailed" datatype="html">
+        <source>C.E.S is a mission-critical ERP designed to orchestrate complex operations with high performance and security. It features a Java 21 Modulith backend with Virtual Threads, an Angular backoffice, and an offline-first PWA for field teams. Implements Domain-Driven Design (DDD), AES-256 GCM encryption, and Outbox Pattern for reliable offline synchronization.</source>
+      </trans-unit>
+      <trans-unit id="projectCesObj1" datatype="html">
+        <source>Orchestrate logistics, commercial, and HR operations in a unified platform.</source>
+      </trans-unit>
+      <trans-unit id="projectCesObj2" datatype="html">
+        <source>Ensure 100% availability for field teams via Offline-First PWA.</source>
+      </trans-unit>
+      <trans-unit id="projectCesObj3" datatype="html">
+        <source>Implement rigorous security standards, including data encryption and immutable auditing.</source>
+      </trans-unit>
+      <trans-unit id="projectCesObj4" datatype="html">
+        <source>Process high I/O volumes using Java Virtual Threads.</source>
+      </trans-unit>
+      <trans-unit id="projectCesGain1" datatype="html">
+        <source>Reduced operational latency with Modulith architecture and Virtual Threads.</source>
+      </trans-unit>
+      <trans-unit id="projectCesGain2" datatype="html">
+        <source>Elimination of data loss in field operations via robust offline synchronization.</source>
+      </trans-unit>
+      <trans-unit id="projectCesGain3" datatype="html">
+        <source>Increased security and compliance with AES-256 encryption and JSONB auditing.</source>
       </trans-unit>
       <trans-unit id="projectGeorouteDesc" datatype="html">
-        <source>API de geolocalização para otimização logística. Integração com Google Maps API para entrega da localização de clientes.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/projects/projects.ts</context>
-          <context context-type="linenumber">161</context>
-        </context-group>
+        <source>Corporate Full Stack solution for logistics optimization with real-time geolocation.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteDetailed" datatype="html">
+        <source>The Sipel Logistics Helper (codenamed GeoRoute) is a corporate Full Stack solution designed to optimize the logistical operations of Sipel Construções LTDA. It centralizes critical client and infrastructure data, integrating it with geolocation services to facilitate route planning and field service.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj1" datatype="html">
+        <source>Centralize querying of Installations, Contract Accounts, and Network Assets.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj2" datatype="html">
+        <source>Offer unified and fast searches with automatic data type detection.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj3" datatype="html">
+        <source>Integrate directly with Google Maps for navigation to service points.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteObj4" datatype="html">
+        <source>Process large volumes of data asynchronously via CSV.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain1" datatype="html">
+        <source>Receiving over 200 requests per day.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain2" datatype="html">
+        <source>Guaranteeing the localization of over 6,000 customers per month.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain3" datatype="html">
+        <source>Optimizing logistics by 93%.</source>
+      </trans-unit>
+      <trans-unit id="projectGeorouteGain4" datatype="html">
+        <source>Replaced a complex mobile spreadsheet workflow with an intuitive interface for users with limited IT knowledge.</source>
+      </trans-unit>
+      <trans-unit id="projectPortfolioDetailed" datatype="html">
+        <source>My personal professional portfolio developed to showcase my skills, experience, and software development projects. It serves as a central hub for my professional identity, demonstrating my proficiency in the Angular and Spring Boot ecosystem.</source>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj1" datatype="html">
+        <source>Present my work in a clean, modern, and accessible way.</source>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj2" datatype="html">
+        <source>Showcase my projects and technical skills.</source>
+      </trans-unit>
+      <trans-unit id="projectPortfolioObj3" datatype="html">
+        <source>Provide a contact channel for professional opportunities.</source>
+      </trans-unit>
+      <trans-unit id="projectLangchainDesc" datatype="html">
+        <source>Backend exploring RAG and Generative AI in the Java ecosystem.</source>
+      </trans-unit>
+      <trans-unit id="projectLangchainDetailed" datatype="html">
+        <source>A backend project exploring Retrieval-Augmented Generation (RAG) and Generative AI within the Java ecosystem. It integrates with Large Language Models (LLMs) to process natural language and provide intelligent responses based on context.</source>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj1" datatype="html">
+        <source>Explore and master the integration of Java with modern AI tools.</source>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj2" datatype="html">
+        <source>Implement RAG patterns for enhanced context awareness.</source>
+      </trans-unit>
+      <trans-unit id="projectLangchainObj3" datatype="html">
+        <source>Test integration with Gemini and other LLMs.</source>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDesc" datatype="html">
+        <source>Backend for Angular developer technical challenge. Implementation of RESTful APIs.</source>
+      </trans-unit>
+      <trans-unit id="projectAngularApiDetailed" datatype="html">
+        <source>A backend application built as a technical challenge for an Angular developer position. It implements a robust set of RESTful APIs, focusing on best practices, data validation, and efficient database interactions.</source>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj1" datatype="html">
+        <source>Demonstrate solid knowledge of REST principles.</source>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj2" datatype="html">
+        <source>Implement secure and efficient endpoints using Spring Boot.</source>
+      </trans-unit>
+      <trans-unit id="projectAngularApiObj3" datatype="html">
+        <source>Showcase database integration and Docker containerization.</source>
       </trans-unit>
     </body>
   </file>
