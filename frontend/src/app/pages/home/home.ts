@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="min-h-screen flex flex-col pt-20">
+    <div class="min-h-screen flex flex-col pt-16 md:pt-20">
 
       <!-- Main Hero Content -->
       <div class="flex-grow flex items-center justify-center px-4 max-w-7xl mx-auto w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center w-full">
 
           <!-- LEFT COLUMN: Text Content -->
           <div class="space-y-6">
@@ -96,22 +96,31 @@ import { CommonModule } from '@angular/common';
                     <span class="text-[#22c55e]">$</span>
                     <span>cat stack.json</span>
                   </div>
-                  <div class="text-blue-300 pl-4 whitespace-pre-wrap leading-relaxed">{{ '{' }}
-  "backend": [
-    "Java",
-    "Spring Boot",
-    "Fastify"
-  ],
-  "frontend": [
-    "Angular",
-    "Next.js"
-  ],
-  "database": [
-    "PostgreSQL",
-    "Redis",
-    "Supabase"
-  ]
-{{ '}' }}</div>
+                  <div class="pl-4 font-mono text-sm leading-relaxed">
+                    <span class="text-gray-400">{{ '{' }}</span>
+                    <div class="pl-4">
+                      <span class="text-code-keyword">"backend"</span><span class="text-gray-400">: [</span>
+                      @for (item of stack.backend; track item; let last = $last) {
+                        <span class="text-code-string">"{{ item }}"</span><span class="text-gray-400">{{ last ? '' : ', ' }}</span>
+                      }
+                      <span class="text-gray-400">],</span>
+                    </div>
+                    <div class="pl-4">
+                      <span class="text-code-keyword">"frontend"</span><span class="text-gray-400">: [</span>
+                      @for (item of stack.frontend; track item; let last = $last) {
+                        <span class="text-code-string">"{{ item }}"</span><span class="text-gray-400">{{ last ? '' : ', ' }}</span>
+                      }
+                      <span class="text-gray-400">],</span>
+                    </div>
+                    <div class="pl-4">
+                      <span class="text-code-keyword">"database"</span><span class="text-gray-400">: [</span>
+                      @for (item of stack.database; track item; let last = $last) {
+                        <span class="text-code-string">"{{ item }}"</span><span class="text-gray-400">{{ last ? '' : ', ' }}</span>
+                      }
+                      <span class="text-gray-400">]</span>
+                    </div>
+                    <span class="text-gray-400">{{ '}' }}</span>
+                  </div>
                 </div>
 
                 <div class="space-y-1">
@@ -206,6 +215,12 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private cdr = inject(ChangeDetectorRef);
+
+  stack = {
+    backend: ['Java', 'Spring Boot', 'Fastify'],
+    frontend: ['Angular', 'Next.js'],
+    database: ['PostgreSQL', 'Redis', 'Supabase']
+  };
 
   phrases: string[] = [
     $localize`:@@homeRoleBackend:Back-End Developer`,

@@ -22,11 +22,11 @@ export interface Project {
       <div class="modal-root">
         <!-- Backdrop -->
         <div class="modal-backdrop" (click)="close()"></div>
-        
+
         <!-- Modal Card Container -->
         <div class="modal-wrapper" (click)="close()">
           <div class="modal-card" (click)="$event.stopPropagation()">
-            
+
             <!-- Terminal Header -->
             <div class="terminal-header">
               <div class="controls">
@@ -45,8 +45,8 @@ export interface Project {
             <!-- Modal Body -->
             <div class="modal-body scroll-container font-sans">
               <div class="content-header">
-                <h2 class="text-white text-3xl font-bold mb-4">{{ project.title }}</h2>
-                <div class="links flex gap-6">
+                <h2 class="text-white text-2xl md:text-3xl font-bold mb-4">{{ project.title }}</h2>
+                <div class="links flex flex-wrap gap-4 md:gap-6">
                   @if (project.github) {
                     <a [href]="project.github" target="_blank" class="link-item">
                       <i class="devicon-github-original"></i> [source_code]
@@ -148,7 +148,6 @@ export interface Project {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 0 0 50px rgba(34, 197, 94, 0.4);
       animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
@@ -194,7 +193,7 @@ export interface Project {
     .close-btn svg { width: 1.25rem; height: 1.25rem; }
 
     .modal-body {
-      padding: 2.5rem;
+      @apply p-6 md:p-10;
       overflow-y: auto;
       flex-grow: 1;
     }

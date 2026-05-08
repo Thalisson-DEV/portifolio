@@ -7,12 +7,12 @@ import { ProjectModalComponent, Project } from './project-modal';
   standalone: true,
   imports: [CommonModule, ProjectModalComponent],
   template: `
-    <div class="pt-32 pb-40 px-4 max-w-7xl mx-auto animate-fade-in">
+    <div class="pt-24 md:pt-32 pb-20 md:pb-40 px-4 max-w-7xl mx-auto animate-fade-in">
 
       <!-- Section Header -->
       <div class="space-y-6 mb-16">
         <div class="flex items-center gap-4">
-          <h2 class="text-3xl font-bold text-white tracking-tight">
+          <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
             <span class="text-[#22c55e] font-mono text-xl mr-2">02.</span>
             <span i18n="@@projectsTitle">deployment_logs.sh</span>
           </h2>

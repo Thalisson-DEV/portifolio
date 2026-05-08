@@ -17,12 +17,12 @@ interface RestException {
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div class="pt-32 pb-40 px-4 max-w-7xl mx-auto animate-fade-in">
+    <div class="pt-24 md:pt-32 pb-20 md:pb-40 px-4 max-w-7xl mx-auto animate-fade-in">
       
       <!-- Section Header -->
       <div class="space-y-6 mb-16">
         <div class="flex items-center gap-4">
-          <h2 class="text-3xl font-bold text-white tracking-tight">
+          <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
             <span class="text-[#22c55e] font-mono text-xl mr-2">03.</span>
             <span i18n="@@contactTitle">establish_connection.sh</span>
           </h2>
@@ -34,7 +34,7 @@ interface RestException {
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
         
         <!-- LEFT COLUMN: Identity & Status -->
         <div class="space-y-12">

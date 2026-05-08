@@ -6,14 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="pt-32 pb-40 px-4 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <div class="pt-24 md:pt-32 pb-20 md:pb-40 px-4 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
 
         <!-- LEFT COLUMN: Fullstack Narrative & Skills -->
         <div class="space-y-12">
           <div class="space-y-6">
             <div class="flex items-center gap-4">
-              <h2 class="text-3xl font-bold text-white tracking-tight">
+              <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
                 <span class="text-[#22c55e] font-mono text-xl mr-2">01.</span>
                 <span i18n="@@aboutTitle">core_identity.sh</span>
               </h2>
@@ -54,32 +54,52 @@ import { CommonModule } from '@angular/common';
 
             <div class="min-h-[160px]">
               <!-- Text Grid -->
-              <div *ngIf="!showIcons" class="grid grid-cols-2 md:grid-cols-3 gap-3 animate-fade-in">
-                @for (skill of skills; track skill) {
-                  <div class="px-3 py-2 bg-[#0a1a0d] border border-[#22c55e]/10 rounded font-mono text-xs text-[#22c55e]/80 hover:border-[#22c55e]/40 hover:text-[#22c55e] transition-all cursor-default flex items-center gap-2 group">
-                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[10px]">></span>
-                    {{ skill }}
+              <div *ngIf="!showIcons" class="space-y-8 animate-fade-in">
+                @for (group of skillGroups; track group.name) {
+                  <div class="space-y-3">
+                    <h4 class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#22c55e]/40 flex items-center gap-2">
+                      <span class="w-1.5 h-[1px] bg-[#22c55e]/20"></span>
+                      {{ group.name }}
+                    </h4>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      @for (skill of group.skills; track skill) {
+                        <div class="px-3 py-2 bg-[#0a1a0d] border border-[#22c55e]/10 rounded font-mono text-xs text-[#22c55e]/80 hover:border-[#22c55e]/40 hover:text-[#22c55e] transition-all cursor-default flex items-center gap-2 group">
+                          <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[10px]">></span>
+                          {{ skill }}
+                        </div>
+                      }
+                    </div>
                   </div>
                 }
               </div>
 
               <!-- Icons Flex -->
-              <div *ngIf="showIcons" class="flex flex-wrap gap-8 animate-fade-in items-center">
-                @for (skill of skills; track skill) {
-                  <div class="group relative flex flex-col items-center" tabindex="0" [attr.aria-label]="skill">
-                    <div class="w-14 h-14 flex items-center justify-center bg-[#0a1a0d] border border-[#22c55e]/5 rounded-lg group-hover:border-[#22c55e]/30 transition-all duration-300 group-hover:-translate-y-1">
-                      <i *ngIf="getIconClass(skill)"
-                         [class]="getIconClass(skill) + ' text-3xl text-gray-500 group-hover:text-[#22c55e] transition-colors duration-300'"
-                         aria-hidden="true">
-                      </i>
-                      <span *ngIf="!getIconClass(skill)" class="text-[10px] text-gray-500 font-mono text-center px-1">
-                        {{ skill }}
-                      </span>
-                    </div>
+              <div *ngIf="showIcons" class="space-y-8 animate-fade-in">
+                @for (group of skillGroups; track group.name) {
+                  <div class="space-y-4">
+                    <h4 class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#22c55e]/40 flex items-center gap-2">
+                      <span class="w-1.5 h-[1px] bg-[#22c55e]/20"></span>
+                      {{ group.name }}
+                    </h4>
+                    <div class="flex flex-wrap gap-6 md:gap-8 items-center">
+                      @for (skill of group.skills; track skill) {
+                        <div class="group relative flex flex-col items-center" tabindex="0" [attr.aria-label]="skill">
+                          <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#0a1a0d] border border-[#22c55e]/5 rounded-lg group-hover:border-[#22c55e]/30 transition-all duration-300 group-hover:-translate-y-1">
+                            <i *ngIf="getIconClass(skill)"
+                               [class]="getIconClass(skill) + ' text-2xl md:text-3xl text-gray-500 group-hover:text-[#22c55e] transition-colors duration-300'"
+                               aria-hidden="true">
+                            </i>
+                            <span *ngIf="!getIconClass(skill)" class="text-[9px] text-gray-500 font-mono text-center px-1">
+                              {{ skill }}
+                            </span>
+                          </div>
 
-                    <span class="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition-all text-[9px] font-mono text-[#22c55e] uppercase tracking-widest pointer-events-none">
-                      {{ skill }}
-                    </span>
+                          <span class="absolute -bottom-6 opacity-0 group-hover:opacity-100 transition-all text-[9px] font-mono text-[#22c55e] uppercase tracking-widest pointer-events-none whitespace-nowrap">
+                            {{ skill }}
+                          </span>
+                        </div>
+                      }
+                    </div>
                   </div>
                 }
               </div>
@@ -101,8 +121,8 @@ import { CommonModule } from '@angular/common';
               <div class="w-8"></div>
             </div>
 
-            <div class="p-8 space-y-6">
-              <pre class="leading-relaxed"><code class="text-gray-400"><span class="text-[#ff7b72]">public class</span> <span class="text-[#d2a8ff]">Thalisson</span> <span class="text-[#ff7b72]">implements</span> <span class="text-[#d2a8ff]">FullStackArchitect</span> {{ '{' }}
+            <div class="p-4 md:p-8 space-y-6">
+              <pre class="leading-relaxed overflow-x-auto scroll-container-horizontal pb-4"><code class="text-gray-400 text-xs md:text-sm"><span class="text-[#ff7b72]">public class</span> <span class="text-[#d2a8ff]">Thalisson</span> <span class="text-[#ff7b72]">implements</span> <span class="text-[#d2a8ff]">FullStackArchitect</span> {{ '{' }}
 
   <span class="text-[#79c0ff]">@CurrentFocus</span>
   <span class="text-[#ff7b72]">private final</span> String mission = <span class="text-[#a5d6ff]">"High-Performance Architectures"</span>;
@@ -142,6 +162,23 @@ import { CommonModule } from '@angular/common';
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .scroll-container-horizontal {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(34, 197, 94, 0.2) transparent;
+    }
+    .scroll-container-horizontal::-webkit-scrollbar {
+      height: 4px;
+    }
+    .scroll-container-horizontal::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scroll-container-horizontal::-webkit-scrollbar-thumb {
+      background: rgba(34, 197, 94, 0.2);
+      border-radius: 10px;
+    }
+    .scroll-container-horizontal::-webkit-scrollbar-thumb:hover {
+      background: rgba(34, 197, 94, 0.4);
+    }
   `]
 })
 export class AboutComponent {
@@ -156,6 +193,21 @@ export class AboutComponent {
     'Java 21', 'Spring Boot 3', 'Node.js', 'Fastify 5',
     'Next.js 15', 'Virtual Threads', 'Supabase', 'PostgreSQL 17',
     'Redis', 'Claude AI', 'Angular 21', 'PWA', 'Astro 5'
+  ];
+
+  skillGroups = [
+    {
+      name: $localize`:@@aboutBackend:Backend & Core`,
+      skills: ['Java 21', 'Spring Boot 3', 'Virtual Threads', 'Node.js', 'Fastify 5']
+    },
+    {
+      name: $localize`:@@aboutFrontend:Frontend & UX`,
+      skills: ['Angular 21', 'Next.js 15', 'Astro 5', 'PWA']
+    },
+    {
+      name: $localize`:@@aboutDatabase:Infrastructure & Data`,
+      skills: ['PostgreSQL 17', 'Redis', 'Supabase', 'Claude AI']
+    }
   ];
 
   techIconMap: { [key: string]: string } = {
